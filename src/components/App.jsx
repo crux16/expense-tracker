@@ -1,6 +1,6 @@
 // all import below here
 
-import { RegisterForm } from "./RegisterForm/RegisterForm";
+import { LoginForm } from "./LoginForm/LoginForm";
 
 
 
@@ -10,7 +10,7 @@ export const App = () => {
 
   return (
     <div style={{padding:'10px'}}>
-      <RegisterForm ></RegisterForm>
+      <LoginForm ></LoginForm>
     </div>
   )
 };
