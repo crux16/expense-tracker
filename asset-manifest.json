@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/expense-tracker/static/css/main.81ed23e0.css",
+    "main.js": "/expense-tracker/static/js/main.df43184c.js",
+    "static/media/fonnts.com-Suisse_Intl_Regular.ttf": "/expense-tracker/static/media/fonnts.com-Suisse_Intl_Regular.63381689849f5cf35a17.ttf",
+    "static/media/icons.svg": "/expense-tracker/static/media/icons.73550ee2728571423fa76bc7bd708b2c.svg",
+    "index.html": "/expense-tracker/index.html",
+    "main.81ed23e0.css.map": "/expense-tracker/static/css/main.81ed23e0.css.map",
+    "main.df43184c.js.map": "/expense-tracker/static/js/main.df43184c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81ed23e0.css",
+    "static/js/main.df43184c.js"
+  ]
+}
