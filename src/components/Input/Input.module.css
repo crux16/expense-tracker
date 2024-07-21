@@ -1,0 +1,57 @@
+
+.label {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    width: fit-content;;
+}
+
+.subLabel {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    transition: all 250ms ease;
+}
+
+.input:focus + .subLabel {
+    top: 0;
+    transform: translateY(0);
+}
+
+.input {
+    font-family: Suisse Intl;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+
+    width: 399px;
+    padding: 12px 28px 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #FAFAFA33;
+    background-color: transparent;
+    color: currentColor;
+
+    outline: none;
+}
+
+.label:hover .input,
+.label:focus .input,
+.input:hover,
+.input:focus {
+    border-color: #0EF387;
+}
+
+.visible {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.notValid {
+    border-color: #E74A3B;
+}

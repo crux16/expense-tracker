@@ -1,0 +1,37 @@
+@import-normalize; /* bring in normalize.css styles */
+@font-face {
+  font-family: 'Suisse Intl';
+  src: url('./Asset/fonts/fonnts.com-Suisse_Intl_Regular.ttf');
+}
+
+:root {
+  --text-color: #fafafa;
+  --bg-color: #0C0D0D;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

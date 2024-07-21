@@ -1,0 +1,16 @@
+.logo {
+    font-family: 'Suisse Intl';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.35px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+    display: inline-flex;
+    gap: 5px;
+}
+
+.logo svg {
+    height: 16px;
+    width: 27px;
+}

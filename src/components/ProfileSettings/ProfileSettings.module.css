@@ -1,0 +1,19 @@
+.profile {
+    color: #FAFAFA80;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.profile svg {
+    transition: color 0.4s ease;
+}
+
+.profile:hover,
+.profile:focus {
+    color: #FAFAFA;   
+}
+
+.profile:hover svg,
+.profile:focus svg{
+    color: #0EF387;
+}

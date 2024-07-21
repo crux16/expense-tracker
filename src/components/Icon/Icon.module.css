@@ -1,0 +1,12 @@
+.icon {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.error {
+    fill: #e119;
+}
+
+.error:hover {
+    fill: #e11;
+}
