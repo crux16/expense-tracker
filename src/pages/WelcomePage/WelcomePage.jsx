@@ -1,5 +1,5 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import css from './HomePage.module.css';
+import css from './WelcomePage.module.css';
 
 const HomePage = () => {
   return (

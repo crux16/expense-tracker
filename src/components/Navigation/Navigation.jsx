@@ -9,7 +9,7 @@ export const Navigation = () => {
 
   return (
     <nav>
-       <NavLink to="/" >
+      <NavLink to="/" >
         <Logo><span><Icon icon='logo' /></span><span>ExpenseTracker</span></Logo>
       </NavLink>
       <NavLink
