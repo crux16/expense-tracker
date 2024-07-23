@@ -21,19 +21,19 @@ export const LoginForm = () => {
   };
 
   return (
-  <>
-   <div className={css.formHeader}>
+    <>
+      <div className={css.formHeader}>
         <h3 className={css.header}>Sign In</h3>
         <p className={css.subHeader}>Welcome back to effortless expense tracking! Your financial<br />dashboard awaits.</p>
-    </div>
-    <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-       <Input type='email' name='email'>Email</Input>
-      <Input type='password' name='password'>Password</Input>
-      <span className={css.button}>
-        <Button type="submit" variant='cover'>Sign In</Button>
-        <label className={css.subHeader}>Already have account? <NavLink to='/login' className={css.anchor}>Sign Up</NavLink></label>
-      </span>
-    </form>
-  </>
+      </div>
+      <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+        <Input type='email' name='email'>Email</Input>
+        <Input type='password' name='password'>Password</Input>
+        <span className={css.button}>
+          <Button type="submit" variant='cover'>Sign In</Button>
+          <label className={css.subHeader}>Already have account? <NavLink to='/login' className={css.anchor}>Sign Up</NavLink></label>
+        </span>
+      </form>
+    </>
   );
 };
