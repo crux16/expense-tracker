@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/expense-tracker/static/css/main.950217cc.css",
-    "main.js": "/expense-tracker/static/js/main.dc0b7806.js",
+    "main.js": "/expense-tracker/static/js/main.9a9705ae.js",
     "static/media/fonnts.com-Suisse_Intl_Regular.ttf": "/expense-tracker/static/media/fonnts.com-Suisse_Intl_Regular.63381689849f5cf35a17.ttf",
-    "static/media/icons.svg": "/expense-tracker/static/media/icons.73550ee2728571423fa76bc7bd708b2c.svg",
+    "static/media/icons.svg": "/expense-tracker/static/media/icons.92e9dc8353e19681e6b2685d1e0c0699.svg",
     "index.html": "/expense-tracker/index.html",
     "main.950217cc.css.map": "/expense-tracker/static/css/main.950217cc.css.map",
-    "main.dc0b7806.js.map": "/expense-tracker/static/js/main.dc0b7806.js.map"
+    "main.9a9705ae.js.map": "/expense-tracker/static/js/main.9a9705ae.js.map"
   },
   "entrypoints": [
     "static/css/main.950217cc.css",
-    "static/js/main.dc0b7806.js"
+    "static/js/main.9a9705ae.js"
   ]
 }
