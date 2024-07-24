@@ -4,19 +4,23 @@ import { Input } from 'components/Input/Input';
 import css from './LoginForm.module.css';
 import { Button } from 'components/Button/Button';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logIn } from "../../redux/auth/authOperations";
 
 export const LoginForm = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    // dispatch(
-    //   logIn({
-    //     email: form.elements.email.value,
-    //     password: form.elements.password.value,
-    //   })
-    // );
+    dispatch(
+      logIn({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+
+      })
+    );
+
     form.reset();
   };
 
