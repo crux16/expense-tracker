@@ -1,7 +1,7 @@
 // import { useDispatch } from 'react-redux';
 // import { logOut } from '../../redux/auth/authOperations';
 
-//import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 
 // import css from './UserBarBtn.module.css';
 
@@ -23,8 +23,10 @@ import { MenuButton as BaseMenuButton } from '@mui/base/MenuButton';
 import { MenuItem as BaseMenuItem, menuItemClasses } from '@mui/base/MenuItem';
 import { styled } from '@mui/system';
 
+
 export default function UserBarBtn() {
-  //const { user } = useAuth();
+  const { user } = useAuth();
+
   const createHandleMenuClick = (menuItem) => {
     return () => {
       console.log(`Clicked on ${menuItem}`);
@@ -33,7 +35,7 @@ export default function UserBarBtn() {
 
   return (
     <Dropdown>
-      <MenuButton>Rowell C</MenuButton>
+      <MenuButton>Hi {user.name},</MenuButton>
       <Menu slots={{ listbox: Listbox }}>
         <MenuItem onClick={createHandleMenuClick('Profile Settings')}>Profile Settings</MenuItem>
         {/* <MenuItem onClick={createHandleMenuClick('Language settings')}>

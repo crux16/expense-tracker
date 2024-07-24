@@ -1,13 +1,15 @@
 // all import below here
 
 import { useAuth } from "hooks/useAuth";
-//import { refreshUser } from "redux/auth/authOperations";
+// import { refreshUser } from "redux/auth/authOperations";
 
 import { Routes, Route } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
 
-import { lazy } from "react";
-//import { useDispatch } from "react-redux";
+import { lazy, 
+  // useEffect
+ } from "react";
+// import { useDispatch } from "react-redux";
 import { RestrictedRoute } from "./RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 //import { Header } from "./Header/Header";
@@ -27,7 +29,7 @@ const MainTransactionsPage = lazy(() => import("../pages/MainTransactionsPage/Ma
 
 
 export const App = () => {
-  //const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
   // useEffect(() => {
@@ -42,7 +44,7 @@ export const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
 
-        <Route path="/signup" element={<RestrictedRoute redirectTo="mainTransactionsPage" component={<RegisterPage />} />} />
+        <Route path="/signup" element={<RestrictedRoute  redirectTo="/mainTransactionsPage" component={<RegisterPage />} />} />
 
         <Route path="/login" element={<RestrictedRoute redirectTo="/mainTransactionsPage" component={<LoginPage />} />} />
 

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from './contactsOperation';
+import { fetchCategory, addCategory, deleteCategory } from './categoryOperation';
 
-const contactsSlice = createSlice({
-  name: 'contacts',
+const categorySlice = createSlice({
+  name: 'category',
   initialState: {
     items: [],
     isLoading: false,
@@ -11,38 +11,38 @@ const contactsSlice = createSlice({
   // reducers: {},
   extraReducers: builder => {
     builder
-      .addCase(fetchContacts.pending, state => {
+      .addCase(fetchCategory.pending, state => {
         state.isLoading = true;
       })
-      .addCase(fetchContacts.rejected, (state, action) => {
+      .addCase(fetchCategory.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       })
-      .addCase(fetchContacts.fulfilled, (state, action) => {
+      .addCase(fetchCategory.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(addContact.pending, state => {
+      .addCase(addCategory.pending, state => {
         state.isLoading = true;
       })
-      .addCase(addContact.rejected, (state, action) => {
+      .addCase(addCategory.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       })
-      .addCase(addContact.fulfilled, (state, action) => {
+      .addCase(addCategory.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items.push(action.payload);
       })
-      .addCase(deleteContact.pending, state => {
+      .addCase(deleteCategory.pending, state => {
         state.isLoading = true;
       })
-      .addCase(deleteContact.rejected, (state, action) => {
+      .addCase(deleteCategory.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       })
-      .addCase(deleteContact.fulfilled, (state, action) => {
+      .addCase(deleteCategory.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = state.items.filter(item => item.id !== action.payload.id);
@@ -50,4 +50,4 @@ const contactsSlice = createSlice({
   },
 });
 
-export const contactsReducer = contactsSlice.reducer;
+export const categoryReducer = categorySlice.reducer;

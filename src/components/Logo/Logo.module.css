@@ -1,5 +1,5 @@
 .logo {
-    font-family: 'Suisse Intl';
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 700;
     line-height: 23.35px;

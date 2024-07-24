@@ -29,37 +29,3 @@
 
     color: var(--subText-color);
 }
-
-.form {
-    padding: 40px;
-}
-
-.radio {
-    color:var(--theme-color)
-}
-
-.date {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-}
-
-.label {
-    color: var(--text-color)
-}
-
-.subDate {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    background-color: transparent;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-    color: #FAFAFA66;
-
-
-    border: 1px solid #FAFAFA33;
-}

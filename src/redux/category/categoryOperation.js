@@ -4,8 +4,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 /*
  * GET @ /contacts
  */
-export const fetchContacts = createAsyncThunk(
-  'contacts/fetchAll',
+export const fetchCategory = createAsyncThunk(
+  'category/fetchAll',
   async (_, thunkAPI) => {
     try {
       const response = await axios.get('/contacts');
@@ -20,8 +20,8 @@ export const fetchContacts = createAsyncThunk(
  * POST @ /contacts
  * body: { name, number }
  */
-export const addContact = createAsyncThunk(
-  'contacts/addContact',
+export const addCategory = createAsyncThunk(
+  'category/add',
   async ({ name, number }, thunkAPI) => {
     try {
       const response = await axios.post('/contacts', { name, number });
@@ -35,11 +35,11 @@ export const addContact = createAsyncThunk(
 /*
  * DELETE @ /contacts/:id
  */
-export const deleteContact = createAsyncThunk(
-  'contacts/deleteContact',
-  async (contactId, thunkAPI) => {
+export const deleteCategory = createAsyncThunk(
+  'category/delete',
+  async (categoryId, thunkAPI) => {
     try {
-      const response = await axios.delete(`/contacts/${contactId}`);
+      const response = await axios.delete(`/contacts/${categoryId}`);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
