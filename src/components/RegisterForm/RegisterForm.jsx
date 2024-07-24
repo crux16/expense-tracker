@@ -12,10 +12,10 @@ export const RegisterForm = () => {
     e.preventDefault();
     const form = e.currentTarget;
     const view = {
-          name: form.elements.name.value,
-          email: form.elements.email.value,
-          password: form.elements.password.value,
-        }
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      password: form.elements.password.value,
+    }
     console.log(view);
     // dispatch(
     //   register({
@@ -39,8 +39,8 @@ export const RegisterForm = () => {
         <Input type='email' name='email'>Email</Input>
         <Input type='password' name='password'>Password</Input>
         <span className={css.button}>
-        <Button type="submit" variant='cover'>Sign Up</Button>
-        <label className={css.subHeader}>Already have account? <NavLink to='/login' className={css.anchor}>Sign In</NavLink></label>
+          <Button type="submit" variant='cover'>Sign Up</Button>
+          <label className={css.subHeader}>Already have an account? <NavLink to='/login' className={css.anchor}>Sign In</NavLink></label>
         </span>
       </form>
     </>

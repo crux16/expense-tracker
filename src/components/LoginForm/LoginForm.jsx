@@ -31,7 +31,7 @@ export const LoginForm = () => {
         <Input type='password' name='password'>Password</Input>
         <span className={css.button}>
           <Button type="submit" variant='cover'>Sign In</Button>
-          <label className={css.subHeader}>Already have an account? <NavLink to='/login' className={css.anchor}>Sign Up</NavLink></label>
+          <label className={css.subHeader}>Dont't have an account? <NavLink to='/signup' className={css.anchor}>Sign Up</NavLink></label>
         </span>
       </form>
     </>
