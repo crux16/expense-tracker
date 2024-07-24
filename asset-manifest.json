@@ -1,15 +1,30 @@
 {
   "files": {
-    "main.css": "/expense-tracker/static/css/main.950217cc.css",
-    "main.js": "/expense-tracker/static/js/main.9a9705ae.js",
+    "main.css": "/expense-tracker/static/css/main.cf05b6eb.css",
+    "main.js": "/expense-tracker/static/js/main.26b639d2.js",
+    "static/css/735.c4545e4e.chunk.css": "/expense-tracker/static/css/735.c4545e4e.chunk.css",
+    "static/js/735.7a957362.chunk.js": "/expense-tracker/static/js/735.7a957362.chunk.js",
+    "static/css/488.cc266cf9.chunk.css": "/expense-tracker/static/css/488.cc266cf9.chunk.css",
+    "static/js/488.bf265994.chunk.js": "/expense-tracker/static/js/488.bf265994.chunk.js",
+    "static/css/268.243fb1f1.chunk.css": "/expense-tracker/static/css/268.243fb1f1.chunk.css",
+    "static/js/268.61689540.chunk.js": "/expense-tracker/static/js/268.61689540.chunk.js",
+    "static/js/217.3be4924f.chunk.js": "/expense-tracker/static/js/217.3be4924f.chunk.js",
+    "static/js/50.9409fec6.chunk.js": "/expense-tracker/static/js/50.9409fec6.chunk.js",
     "static/media/fonnts.com-Suisse_Intl_Regular.ttf": "/expense-tracker/static/media/fonnts.com-Suisse_Intl_Regular.63381689849f5cf35a17.ttf",
     "static/media/icons.svg": "/expense-tracker/static/media/icons.92e9dc8353e19681e6b2685d1e0c0699.svg",
     "index.html": "/expense-tracker/index.html",
-    "main.950217cc.css.map": "/expense-tracker/static/css/main.950217cc.css.map",
-    "main.9a9705ae.js.map": "/expense-tracker/static/js/main.9a9705ae.js.map"
+    "main.cf05b6eb.css.map": "/expense-tracker/static/css/main.cf05b6eb.css.map",
+    "main.26b639d2.js.map": "/expense-tracker/static/js/main.26b639d2.js.map",
+    "735.c4545e4e.chunk.css.map": "/expense-tracker/static/css/735.c4545e4e.chunk.css.map",
+    "735.7a957362.chunk.js.map": "/expense-tracker/static/js/735.7a957362.chunk.js.map",
+    "488.cc266cf9.chunk.css.map": "/expense-tracker/static/css/488.cc266cf9.chunk.css.map",
+    "488.bf265994.chunk.js.map": "/expense-tracker/static/js/488.bf265994.chunk.js.map",
+    "268.243fb1f1.chunk.css.map": "/expense-tracker/static/css/268.243fb1f1.chunk.css.map",
+    "268.61689540.chunk.js.map": "/expense-tracker/static/js/268.61689540.chunk.js.map",
+    "50.9409fec6.chunk.js.map": "/expense-tracker/static/js/50.9409fec6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.950217cc.css",
-    "static/js/main.9a9705ae.js"
+    "static/css/main.cf05b6eb.css",
+    "static/js/main.26b639d2.js"
   ]
 }
