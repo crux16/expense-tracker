@@ -1,31 +1,35 @@
 {
   "files": {
     "main.css": "/expense-tracker/static/css/main.095f3deb.css",
-    "main.js": "/expense-tracker/static/js/main.48d5a3ae.js",
+    "main.js": "/expense-tracker/static/js/main.57f2769b.js",
     "static/css/735.c4545e4e.chunk.css": "/expense-tracker/static/css/735.c4545e4e.chunk.css",
     "static/js/735.7a957362.chunk.js": "/expense-tracker/static/js/735.7a957362.chunk.js",
     "static/css/488.cc266cf9.chunk.css": "/expense-tracker/static/css/488.cc266cf9.chunk.css",
     "static/js/488.03049330.chunk.js": "/expense-tracker/static/js/488.03049330.chunk.js",
     "static/css/268.243fb1f1.chunk.css": "/expense-tracker/static/css/268.243fb1f1.chunk.css",
-    "static/js/268.edcd9ed9.chunk.js": "/expense-tracker/static/js/268.edcd9ed9.chunk.js",
-    "static/js/217.c13fb6ab.chunk.js": "/expense-tracker/static/js/217.c13fb6ab.chunk.js",
+    "static/js/268.41e18b96.chunk.js": "/expense-tracker/static/js/268.41e18b96.chunk.js",
+    "static/css/298.68a510c7.chunk.css": "/expense-tracker/static/css/298.68a510c7.chunk.css",
+    "static/js/298.89cd1b1d.chunk.js": "/expense-tracker/static/js/298.89cd1b1d.chunk.js",
     "static/js/50.130b6673.chunk.js": "/expense-tracker/static/js/50.130b6673.chunk.js",
+    "static/js/873.613a0a5e.chunk.js": "/expense-tracker/static/js/873.613a0a5e.chunk.js",
     "static/media/fonnts.com-Suisse_Intl_Regular.ttf": "/expense-tracker/static/media/fonnts.com-Suisse_Intl_Regular.63381689849f5cf35a17.ttf",
     "static/media/icons.svg": "/expense-tracker/static/media/icons.e2ce4a45f46652b99750b95e40fabf06.svg",
     "index.html": "/expense-tracker/index.html",
     "main.095f3deb.css.map": "/expense-tracker/static/css/main.095f3deb.css.map",
-    "main.48d5a3ae.js.map": "/expense-tracker/static/js/main.48d5a3ae.js.map",
+    "main.57f2769b.js.map": "/expense-tracker/static/js/main.57f2769b.js.map",
     "735.c4545e4e.chunk.css.map": "/expense-tracker/static/css/735.c4545e4e.chunk.css.map",
     "735.7a957362.chunk.js.map": "/expense-tracker/static/js/735.7a957362.chunk.js.map",
     "488.cc266cf9.chunk.css.map": "/expense-tracker/static/css/488.cc266cf9.chunk.css.map",
     "488.03049330.chunk.js.map": "/expense-tracker/static/js/488.03049330.chunk.js.map",
     "268.243fb1f1.chunk.css.map": "/expense-tracker/static/css/268.243fb1f1.chunk.css.map",
-    "268.edcd9ed9.chunk.js.map": "/expense-tracker/static/js/268.edcd9ed9.chunk.js.map",
-    "217.c13fb6ab.chunk.js.map": "/expense-tracker/static/js/217.c13fb6ab.chunk.js.map",
-    "50.130b6673.chunk.js.map": "/expense-tracker/static/js/50.130b6673.chunk.js.map"
+    "268.41e18b96.chunk.js.map": "/expense-tracker/static/js/268.41e18b96.chunk.js.map",
+    "298.68a510c7.chunk.css.map": "/expense-tracker/static/css/298.68a510c7.chunk.css.map",
+    "298.89cd1b1d.chunk.js.map": "/expense-tracker/static/js/298.89cd1b1d.chunk.js.map",
+    "50.130b6673.chunk.js.map": "/expense-tracker/static/js/50.130b6673.chunk.js.map",
+    "873.613a0a5e.chunk.js.map": "/expense-tracker/static/js/873.613a0a5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.095f3deb.css",
-    "static/js/main.48d5a3ae.js"
+    "static/js/main.57f2769b.js"
   ]
 }
