@@ -5,7 +5,7 @@ export const AuthNav = () => {
   return (
     <nav>
       <NavLink
-        to="/register"
+        to="/signup"
         className={({ isActive }) => (isActive ? css.linkActive : css.link)}
       >
         Register

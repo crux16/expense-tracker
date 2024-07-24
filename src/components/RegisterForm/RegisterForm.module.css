@@ -27,7 +27,7 @@
   letter-spacing: -0.02em;
   text-align: left;
 
-  color: #FAFAFA66;
+  color: var(--subText-color);
 
 }
 
@@ -39,10 +39,10 @@
 }
 
 .anchor {
-  color: #FAFAFA;
+  color: var(--text-color);
 }
 
 .anchor:hover,
 .anchor:focus {
-  color: #0EF387;
+  color: var(--theme-color);
 }

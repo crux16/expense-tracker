@@ -3,7 +3,7 @@ import css from './Input.module.css';
 import { Icon } from 'components/Icon/Icon';
 
 
-export const Input = ({type,name,children}) =>{
+export const Input = ({type, colspan, name,children,title}) =>{
     const [showPassword, setShowPassword] = useState(false);
     const [visibleIcon, setVisibleIcon] = useState(false);
     const [value, setValue] = useState('');
@@ -35,6 +35,19 @@ export const Input = ({type,name,children}) =>{
                 <span className={css.visible} onClick={visible}>{visibleIcon && (!showPassword?<Icon icon='eyeOff' />:<Icon icon='eye' />)}</span>
                 </>
             )
+
+            case 'textarea':
+                return (
+                    <>
+                    <span>{title}</span>
+                    <textarea
+                    className={`${css.input} ${css[type]}`}
+                    rows={colspan}
+                    name={name}
+                    placeholder={children}
+                    ></textarea>
+                    </>
+                )
 
             default:
                 return (

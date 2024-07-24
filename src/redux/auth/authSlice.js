@@ -4,13 +4,17 @@ import { register, logIn, logOut, refreshUser } from './authOperations';
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: { name: null, email: null },
+    user: { name: null, email: null, avatarUrl: null },
     token: null,
     isLoggedIn: false,
     isRefreshing: false,
+    isLoading: false,
   },
   extraReducers: builder => {
     builder
+    .addCase(register.pending, state => {
+      state.isLoading = true;
+    })
       .addCase(register.fulfilled, (state, action) => {
         state.user = action.payload.user;
         state.token = action.payload.token;

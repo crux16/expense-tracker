@@ -8,6 +8,7 @@
 
     display: inline-flex;
     gap: 5px;
+    color: var(--text-color);
 }
 
 .logo svg {

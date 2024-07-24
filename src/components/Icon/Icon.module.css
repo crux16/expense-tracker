@@ -10,3 +10,9 @@
 .error:hover {
     fill: #e11;
 }
+
+.theme {
+    background-color: var(--theme-color);
+    padding: 16px;
+    border-radius: 13px;
+}

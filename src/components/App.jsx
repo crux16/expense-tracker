@@ -1,13 +1,14 @@
 // all import below here
 
-import { useAuth } from "hooks/useAuth";
-//import { refreshUser } from "redux/auth/authOperations";
+// import { useAuth } from "hooks/useAuth";
+// import { refreshUser} from "redux/auth/authOperations";
+// import { useEffect } from "react";
 
 import { Routes, Route } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
 
 import { lazy } from "react";
-//import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 import { RestrictedRoute } from "./RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 
@@ -25,16 +26,18 @@ const MainTransactionsPage = lazy(() => import("../pages/MainTransactionsPage/Ma
 
 
 export const App = () => {
-  //const dispatch = useDispatch();
-  const { isRefreshing } = useAuth();
+  // const dispatch = useDispatch();
+  // const { isRefreshing } = useAuth();
 
   // useEffect(() => {
   //   dispatch(refreshUser());
   // }, [dispatch]);
 
 
-  return isRefreshing ? (<b>Refreshing user...</b>) : (
-
+  
+  // isRefreshing ? (<b>Refreshing user...</b>) :
+   return (
+    <>
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
@@ -47,14 +50,6 @@ export const App = () => {
       </Route>
 
     </Routes>
-
-    // <div style={{ padding: '10px' }}>
-    //   <LoginForm ></LoginForm>
-    // </div>
+    </>
   )
 };
-
-
-
-
-

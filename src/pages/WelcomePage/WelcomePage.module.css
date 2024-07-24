@@ -1,8 +1,8 @@
 .container {
-  min-height: calc(100vh - 50px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 54px;
+  padding: 74px 100px;
 }
 
 .title {
