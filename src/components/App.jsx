@@ -10,6 +10,8 @@ import { lazy } from "react";
 //import { useDispatch } from "react-redux";
 import { RestrictedRoute } from "./RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
+//import { Header } from "./Header/Header";
+//import UserBarBtn from "./UserBarBtn/UserBarBtn";
 
 
 
@@ -36,6 +38,7 @@ export const App = () => {
   return isRefreshing ? (<b>Refreshing user...</b>) : (
 
     <Routes>
+
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
 
@@ -44,17 +47,18 @@ export const App = () => {
         <Route path="/login" element={<RestrictedRoute redirectTo="/mainTransactionsPage" component={<LoginPage />} />} />
 
         <Route path="/mainTransactionsPage" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
+
+        {/* <Route path="/mainTransactionsPage" component={<MainTransactionsPage />} /> */}
       </Route>
 
     </Routes>
-
-    // <div style={{ padding: '10px' }}>
-    //   <LoginForm ></LoginForm>
-    // </div>
   )
 };
 
-
+// {/* 
+//     // <div style={{ padding: '10px' }}>
+//     //   <LoginForm ></LoginForm>
+//     // </div> */}
 
 
 
