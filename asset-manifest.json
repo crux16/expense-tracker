@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/expense-tracker/static/css/main.d2899db2.css",
-    "main.js": "/expense-tracker/static/js/main.cfd33874.js",
-    "static/css/735.c4545e4e.chunk.css": "/expense-tracker/static/css/735.c4545e4e.chunk.css",
-    "static/js/735.7a957362.chunk.js": "/expense-tracker/static/js/735.7a957362.chunk.js",
+    "main.css": "/expense-tracker/static/css/main.6f2e40d0.css",
+    "main.js": "/expense-tracker/static/js/main.9bd40ed9.js",
+    "static/css/851.5ca1b80e.chunk.css": "/expense-tracker/static/css/851.5ca1b80e.chunk.css",
+    "static/js/851.ebd71530.chunk.js": "/expense-tracker/static/js/851.ebd71530.chunk.js",
     "static/css/488.cc266cf9.chunk.css": "/expense-tracker/static/css/488.cc266cf9.chunk.css",
     "static/js/488.03049330.chunk.js": "/expense-tracker/static/js/488.03049330.chunk.js",
     "static/css/268.243fb1f1.chunk.css": "/expense-tracker/static/css/268.243fb1f1.chunk.css",
@@ -11,14 +11,17 @@
     "static/css/258.46d20c67.chunk.css": "/expense-tracker/static/css/258.46d20c67.chunk.css",
     "static/js/258.75b03501.chunk.js": "/expense-tracker/static/js/258.75b03501.chunk.js",
     "static/js/50.130b6673.chunk.js": "/expense-tracker/static/js/50.130b6673.chunk.js",
-    "static/js/883.d0b9fe3d.chunk.js": "/expense-tracker/static/js/883.d0b9fe3d.chunk.js",
+    "static/js/883.9491969c.chunk.js": "/expense-tracker/static/js/883.9491969c.chunk.js",
+    "static/media/hero-image-tab.png": "/expense-tracker/static/media/hero-image-tab.f95bf92e6942450910e7.png",
+    "static/media/hero-image-mob.png": "/expense-tracker/static/media/hero-image-mob.2270523ebaf67963322a.png",
     "static/media/fonnts.com-Suisse_Intl_Regular.ttf": "/expense-tracker/static/media/fonnts.com-Suisse_Intl_Regular.63381689849f5cf35a17.ttf",
     "static/media/icons.svg": "/expense-tracker/static/media/icons.e2ce4a45f46652b99750b95e40fabf06.svg",
     "index.html": "/expense-tracker/index.html",
-    "main.d2899db2.css.map": "/expense-tracker/static/css/main.d2899db2.css.map",
-    "main.cfd33874.js.map": "/expense-tracker/static/js/main.cfd33874.js.map",
-    "735.c4545e4e.chunk.css.map": "/expense-tracker/static/css/735.c4545e4e.chunk.css.map",
-    "735.7a957362.chunk.js.map": "/expense-tracker/static/js/735.7a957362.chunk.js.map",
+    "static/media/arrow.svg": "/expense-tracker/static/media/arrow.eff1945058dea01916f9db8bb673738a.svg",
+    "main.6f2e40d0.css.map": "/expense-tracker/static/css/main.6f2e40d0.css.map",
+    "main.9bd40ed9.js.map": "/expense-tracker/static/js/main.9bd40ed9.js.map",
+    "851.5ca1b80e.chunk.css.map": "/expense-tracker/static/css/851.5ca1b80e.chunk.css.map",
+    "851.ebd71530.chunk.js.map": "/expense-tracker/static/js/851.ebd71530.chunk.js.map",
     "488.cc266cf9.chunk.css.map": "/expense-tracker/static/css/488.cc266cf9.chunk.css.map",
     "488.03049330.chunk.js.map": "/expense-tracker/static/js/488.03049330.chunk.js.map",
     "268.243fb1f1.chunk.css.map": "/expense-tracker/static/css/268.243fb1f1.chunk.css.map",
@@ -26,10 +29,10 @@
     "258.46d20c67.chunk.css.map": "/expense-tracker/static/css/258.46d20c67.chunk.css.map",
     "258.75b03501.chunk.js.map": "/expense-tracker/static/js/258.75b03501.chunk.js.map",
     "50.130b6673.chunk.js.map": "/expense-tracker/static/js/50.130b6673.chunk.js.map",
-    "883.d0b9fe3d.chunk.js.map": "/expense-tracker/static/js/883.d0b9fe3d.chunk.js.map"
+    "883.9491969c.chunk.js.map": "/expense-tracker/static/js/883.9491969c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d2899db2.css",
-    "static/js/main.cfd33874.js"
+    "static/css/main.6f2e40d0.css",
+    "static/js/main.9bd40ed9.js"
   ]
 }
