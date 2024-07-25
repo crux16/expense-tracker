@@ -6,7 +6,7 @@ const MainTransactionsPage = () => {
         return (
         <div>MainTransactionsPage</div>
         <Header />
-        <h1 ss={{ color: "#fff", fontSize: "bold" }}>Hello World</h1>
+        <h1 sx={{ color: "#fff", fontSize: "bold" }}>Hello World</h1>
 
         )
     </>
