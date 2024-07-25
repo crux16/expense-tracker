@@ -1,0 +1,49 @@
+.tabDiv {
+    background-color: var(--text-color);
+    height: 40px;
+    width: 200px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    
+}
+
+.arrow {
+    background-color: var(--accent-color);
+    height: 36px;
+    width: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.balanceDiv {
+    color: rgb(17, 16, 28, 50%);
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.balance {
+    color: var(--bg-color);
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.percentDiv {
+    color: #02B15A;
+    background-color: rgb(2, 177, 90, 15%);
+    font-size: 12px;
+    height: 22px;
+    width: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
