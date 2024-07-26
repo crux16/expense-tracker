@@ -6,9 +6,12 @@ import { Button } from 'components/Button/Button';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { register } from "../../redux/auth/authOperations";
+import { BgImageWrapper } from 'components/BgImageWrapper/BgImageWrapper';
+import useMediaQuery from 'hooks/useMediaQuery';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+  const isDesktop = useMediaQuery('(min-width: 1439px)');
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -46,20 +49,29 @@ export const RegisterForm = () => {
 
   return (
     <>
-      <div className={css.formHeader}>
-        <h3 className={css.header}>Sign Up</h3>
-        <p className={css.subHeader}>Step into a world of hassle-free expense management! Your journey<br />towards financial mastery begins here.</p>
-      </div>
-      <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-        <Input type='text' name='name'>Name</Input>
+      <div className={css.regWrapper}>
+        <div>
+          {isDesktop ? <BgImageWrapper /> : null}
+        </div>
+        <div className={css.formContainer}>
+          <div className={css.formHeader}>
+            <h3 className={css.header}>Sign Up</h3>
+            <p className={css.subHeader}>Step into a world of hassle-free expense management! Your journey<br />towards financial mastery begins here.</p>
+          </div>
+          <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
+            <Input type='text' name='name'>Name</Input>
 
-        <Input type='email' name='email'>Email</Input>
-        <Input type='password' name='password'>Password</Input>
-        <span className={css.button}>
-          <Button type="submit" variant='cover'>Sign Up</Button>
-          <label className={css.subHeader}>Already have an account? <NavLink to='/login' className={css.anchor}>Sign In</NavLink></label>
-        </span>
-      </form>
+            <Input type='email' name='email'>Email</Input>
+            <Input type='password' name='password'>Password</Input>
+            <span className={css.button}>
+              <Button type="submit" variant='cover'>Sign Up</Button>
+              <label className={css.subHeader}>Already have an account? <NavLink to='/login' className={css.anchor}>Sign In</NavLink></label>
+            </span>
+          </form>
+        </div>
+        
+      </div>
+      
     </>
   );
 };
