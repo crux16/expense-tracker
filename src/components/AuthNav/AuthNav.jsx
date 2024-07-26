@@ -27,7 +27,7 @@ export const AuthNav = () => {
   return (
     <nav className={css.nav}>
       <NavLink
-        to="/register"
+        to="/signup"
         className={({ isActive }) => (isActive ? css.linkActive : css.link)}
       >
           <button className={css.buttonActive}>
