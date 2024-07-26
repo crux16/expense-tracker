@@ -5,13 +5,13 @@ import DecorationTab from '../DecorationTab/DecorationTab.jsx'
 import useMediaQuery from '../../hooks/useMediaQuery';
 
 export const BgImageWrapper = () => {
-  const isMobile = useMediaQuery('(max-width: 375px)');
+  const isMobile = useMediaQuery('(max-width: 767px)');
   return (
       <div className={css.wrapper}>
         <div className={css.imgDiv}>
           <img className={css.image} src={isMobile ? heroMob : heroTab} alt="person holding card" />
-          <DecorationTab className={css.decorationTab}/>
         </div>
+        <DecorationTab className={css.decorationTab}/>
       </div>
     
   )

@@ -11,7 +11,8 @@ export const Header = () => {
   return (
     <header className={css.header}>
       <Navigation />
-      <UserBarBtn />
+      <UserBarBtn/>
+      {/* {isLoggedIn ? <UserBarBtn /> : null} */}
     </header>
   );
 };

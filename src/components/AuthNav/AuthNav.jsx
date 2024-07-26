@@ -30,11 +30,9 @@ export const AuthNav = () => {
         to="/register"
         className={({ isActive }) => (isActive ? css.linkActive : css.link)}
       >
-        {({ isActive }) => (
-          <button className={isActive ? css.buttonActive : css.button}>
+          <button className={css.buttonActive}>
             <p className={css.buttonText}>Sign Up</p>
           </button>
-        )}
       </NavLink>
       <NavLink
         to="/login"
