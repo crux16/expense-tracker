@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/expense-tracker/static/css/main.6f2e40d0.css",
-    "main.js": "/expense-tracker/static/js/main.725bc6db.js",
-    "static/css/851.5ca1b80e.chunk.css": "/expense-tracker/static/css/851.5ca1b80e.chunk.css",
-    "static/js/851.ebd71530.chunk.js": "/expense-tracker/static/js/851.ebd71530.chunk.js",
+    "main.js": "/expense-tracker/static/js/main.65e81ef5.js",
+    "static/css/332.c95397cc.chunk.css": "/expense-tracker/static/css/332.c95397cc.chunk.css",
+    "static/js/332.58956c45.chunk.js": "/expense-tracker/static/js/332.58956c45.chunk.js",
     "static/css/488.cc266cf9.chunk.css": "/expense-tracker/static/css/488.cc266cf9.chunk.css",
     "static/js/488.03049330.chunk.js": "/expense-tracker/static/js/488.03049330.chunk.js",
     "static/css/268.243fb1f1.chunk.css": "/expense-tracker/static/css/268.243fb1f1.chunk.css",
@@ -13,15 +13,18 @@
     "static/js/50.130b6673.chunk.js": "/expense-tracker/static/js/50.130b6673.chunk.js",
     "static/js/670.ddd39a61.chunk.js": "/expense-tracker/static/js/670.ddd39a61.chunk.js",
     "static/media/hero-image-tab.png": "/expense-tracker/static/media/hero-image-tab.f95bf92e6942450910e7.png",
+    "static/media/Dakota.png": "/expense-tracker/static/media/Dakota.784159fd19e05f5cc651.png",
     "static/media/hero-image-mob.png": "/expense-tracker/static/media/hero-image-mob.2270523ebaf67963322a.png",
+    "static/media/Jennifer.png": "/expense-tracker/static/media/Jennifer.4f4cd01e60123e6d6701.png",
+    "static/media/Chris.png": "/expense-tracker/static/media/Chris.3c799027d198686eac6f.png",
     "static/media/fonnts.com-Suisse_Intl_Regular.ttf": "/expense-tracker/static/media/fonnts.com-Suisse_Intl_Regular.63381689849f5cf35a17.ttf",
     "static/media/icons.svg": "/expense-tracker/static/media/icons.e2ce4a45f46652b99750b95e40fabf06.svg",
     "index.html": "/expense-tracker/index.html",
     "static/media/arrow.svg": "/expense-tracker/static/media/arrow.eff1945058dea01916f9db8bb673738a.svg",
     "main.6f2e40d0.css.map": "/expense-tracker/static/css/main.6f2e40d0.css.map",
-    "main.725bc6db.js.map": "/expense-tracker/static/js/main.725bc6db.js.map",
-    "851.5ca1b80e.chunk.css.map": "/expense-tracker/static/css/851.5ca1b80e.chunk.css.map",
-    "851.ebd71530.chunk.js.map": "/expense-tracker/static/js/851.ebd71530.chunk.js.map",
+    "main.65e81ef5.js.map": "/expense-tracker/static/js/main.65e81ef5.js.map",
+    "332.c95397cc.chunk.css.map": "/expense-tracker/static/css/332.c95397cc.chunk.css.map",
+    "332.58956c45.chunk.js.map": "/expense-tracker/static/js/332.58956c45.chunk.js.map",
     "488.cc266cf9.chunk.css.map": "/expense-tracker/static/css/488.cc266cf9.chunk.css.map",
     "488.03049330.chunk.js.map": "/expense-tracker/static/js/488.03049330.chunk.js.map",
     "268.243fb1f1.chunk.css.map": "/expense-tracker/static/css/268.243fb1f1.chunk.css.map",
@@ -33,6 +36,6 @@
   },
   "entrypoints": [
     "static/css/main.6f2e40d0.css",
-    "static/js/main.725bc6db.js"
+    "static/js/main.65e81ef5.js"
   ]
 }
