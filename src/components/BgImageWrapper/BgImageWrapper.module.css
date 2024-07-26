@@ -2,16 +2,14 @@
   .wrapper {
     position: relative;
     width: 100%;
-    margin-top: 30px;
   }
 
   .imgDiv {
     width: 100%;
     max-width: 100vw; 
-    margin: 0 auto;
+    margin: 10px 10px 0 20px;
     position: relative;
-    
-    /* padding: 30px 0 30px; */
+    /* padding-left:  10px; */
   }
   
   .image {
@@ -26,3 +24,34 @@
     left: -10px;
     pointer-events: none;
   }
+
+  @media screen and (min-width: 500px) and (max-width: 600px)
+  { 
+    .decorationTab {
+      top: -190px;
+      left: -20px;
+    }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 1439px)
+{
+  .decorationTab {
+    top: -220px;
+    left: -25px;
+    
+  }
+  .imgDiv {
+    margin:  10px 10px 0 30px;
+  }
+}
+
+@media screen and (min-width: 1440px)
+{
+  .decorationTab {
+    top: -180px;
+    left: -25px;
+    
+  }
+}
+    
+  

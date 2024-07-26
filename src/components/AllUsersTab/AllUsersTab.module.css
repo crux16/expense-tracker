@@ -1,0 +1,40 @@
+    @media screen and (min-width: 1439px)
+{
+    .userStats {
+        display: flex;
+        align-items: flex-start;
+        color: #fff;
+        /* margin-top: 80px; */
+        gap: 25px;
+        
+      }
+      
+      .userImages {
+        display: flex;
+        align-items: center;
+      }
+      
+      .userImage {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid var(--bg-color);
+        margin-left: -10px;
+      }
+      
+      .userInfo {
+        margin-left: 20px;
+      }
+      
+      .userCount {
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .userDescription {
+        font-size: 16px;
+        color: var(--subText-color);
+        margin-top: 10px;
+      }
+  
+}
