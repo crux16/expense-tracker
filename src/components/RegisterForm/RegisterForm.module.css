@@ -46,3 +46,26 @@
 .anchor:focus {
   color: #0EF387;
 }
+
+.regWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formContainer
+  {
+    display:flex;
+    flex-direction: column;
+  }
+
+@media screen and (min-width: 1349px)
+{
+  .regWrapper
+  {
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    gap: 120px;
+  }
+}
