@@ -12,7 +12,8 @@ import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import Logout from '@mui/icons-material/Logout';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import { useAuth } from 'hooks/useAuth';
-
+import { useDispatch } from 'react-redux';
+import { logOut } from '../../redux/auth/authOperations';
 
 //npm install @mui/icons-material @mui/material
 //npm install @mui/joy @emotion/react @emotion/styled
@@ -64,7 +65,9 @@ const StyledMenu = styled((props) => (
 
 export default function UserBarBtn() {
 
-  const { isLoggedIn } = useAuth();
+  const dispatch = useDispatch();
+
+  const { isLoggedIn, user } = useAuth();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -76,6 +79,7 @@ export default function UserBarBtn() {
 
   const handleClose = () => {
     setAnchorEl(null);
+    dispatch(logOut());
   };
 
   return (
@@ -93,10 +97,10 @@ export default function UserBarBtn() {
           endIcon={<KeyboardArrowDownIcon />}
         >
 
-          <Avatar sx={{ width: 32, height: 32 }} alt="scarlett">S</Avatar>
+          <Avatar sx={{ width: 32, height: 32 }} alt="scarlett">{!isLoggedIn?'S':user.name[0]}</Avatar>
 
           <Typography sx={{ minWidth: 100 }}>
-            {!isLoggedIn?'Scarlett':''}
+            {!isLoggedIn?'Scarlett':user.name}
           </Typography>
 
         </Button>
