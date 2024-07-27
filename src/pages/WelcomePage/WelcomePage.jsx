@@ -9,7 +9,7 @@ import { HeroContent } from '../../components/HeroContent/HeroContent'
 
 const HomePage = () => {
   // const { isLoggedIn } = useAuth();
-  const isDesktop = useMediaQuery('(min-width: 1439px)');
+  const isDesktop = useMediaQuery('(min-width: 1158px)');
   return (
     <HelmetProvider>
       <Helmet>

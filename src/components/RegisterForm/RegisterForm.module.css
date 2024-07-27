@@ -51,6 +51,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .formContainer
@@ -63,9 +64,10 @@
 {
   .regWrapper
   {
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: row;
-    width: 100vw;
-    gap: 120px;
+    width: 100%;
+    gap: 50px;
+    margin: 40px 0;
   }
 }

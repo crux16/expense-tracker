@@ -8,7 +8,7 @@
     align-content: center;
     align-items:flex-end;
     justify-content: space-around;
-    position: relative;
+    position: absolute;
     margin-left: 20px;
     
 }
@@ -25,21 +25,24 @@
 }
 
 .balanceDiv {
-    color: rgb(17, 16, 28, 50%);
-    font-size: 10px;
+    font-family: Suisse Intl;
+    color: #11101c80;
+    font-size: 16px;
     margin-bottom: 5px;
 }
 
 .balance {
+    font-family: Suisse Intl;
     color: var(--bg-color);
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: bold;
 
 }
 
 .percentDiv {
+    font-family: Suisse Intl;
     color: #02B15A;
-    background-color: rgb(2, 177, 90, 15%);
+    background-color: #02b15a26;
     font-size: 12px;
     height: 22px;
     width: 58px;
@@ -89,7 +92,8 @@
 /* @media screen and (min-width: 1439px)
 { 
     .tabDiv {
-        margin-left: 20px;
+        height: 121px;
+        width: 303px;
         
     }
 } */

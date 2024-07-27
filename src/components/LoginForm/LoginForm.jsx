@@ -10,7 +10,7 @@ import { BgImageWrapper } from 'components/BgImageWrapper/BgImageWrapper';
 
 
 export const LoginForm = () => {
-  const isDesktop = useMediaQuery('(min-width: 1439px)');
+  const isDesktop = useMediaQuery('(min-width: 1157px)');
 
   const dispatch = useDispatch();
 
