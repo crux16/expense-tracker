@@ -36,6 +36,9 @@
   }
 
 .arrow {
+    padding: 11px 12px;
+    border-radius: 10px;
+    background-color: var(--theme-color);
     color: #171719;
 }
 

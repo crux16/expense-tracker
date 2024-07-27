@@ -15,15 +15,19 @@ const MainTransactionsPage = () => {
         <title>Main Transaction</title>
       </Helmet>
       <div className={css.container}>
-        <div>
+        <div className={css.text}>
         <h3 className={css.title}>Expense Log</h3>
         <p className={css.subText}>
             Capture and organize every penny spent with ease! A clear view of your financial habit at
             <br />your fingertips.</p>
-        <TransactionsTotalAmount />
-        <TransactionsChart />
         </div>
-        <div className={css.subContainer}>
+        <div className={`${css.amount}`}>
+        <TransactionsTotalAmount />
+        </div >
+        <div className={`${css.chart} ${css.subContainer}`}>
+          <TransactionsChart />
+        </div>
+        <div className={`${css.form} ${css.subContainer}`}>
         <TransactionForm />
       </div>
       </div>

@@ -1,13 +1,44 @@
 .container {
-    padding: 59px 100px;
     display: grid;
-    grid-template-columns: 5fr 5fr;
-    gap: 44px;
+    
+    @media screen and (min-width:768px) {
+        grid-template-areas: 
+        'text text text text text text'
+        'amount amount amount amount amount amount'
+        'chart chart chart chart chart chart'
+        'form form form form form form';
+        padding: 59px 100px;
+        gap: 40px 44px;
+    }
+
+    @media screen and (min-width:1158px) {
+        grid-template-areas: 
+        'text text text form form form'
+        'amount amount amount form form form'
+        'chart chart chart form form form';
+        padding: 59px 100px;
+    }
 }
 
 .subContainer {
     background-color: #171719;
     border-radius: 30px;
+}
+
+.text {
+    grid-area: text;
+}
+
+.amount {
+    grid-area: amount;
+}
+
+.chart {
+    grid-area: chart;
+}
+
+.form {
+    grid-area: form;
 }
 
 .title {

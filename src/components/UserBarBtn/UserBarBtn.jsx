@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import Logout from '@mui/icons-material/Logout';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import { useAuth } from 'hooks/useAuth';
 
 
 //npm install @mui/icons-material @mui/material
@@ -63,6 +64,8 @@ const StyledMenu = styled((props) => (
 
 export default function UserBarBtn() {
 
+  const { isLoggedIn } = useAuth();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const open = Boolean(anchorEl);
@@ -92,7 +95,8 @@ export default function UserBarBtn() {
 
           <Avatar sx={{ width: 32, height: 32 }} alt="scarlett">S</Avatar>
 
-          <Typography sx={{ minWidth: 100 }}>Scarlett
+          <Typography sx={{ minWidth: 100 }}>
+            {!isLoggedIn?'Scarlett':''}
           </Typography>
 
         </Button>

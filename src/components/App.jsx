@@ -1,17 +1,18 @@
 // all import below here
 
 import { useAuth } from "hooks/useAuth";
-// import { refreshUser } from "redux/auth/authOperations";
+import { refreshUser } from "../redux/auth/authOperations";
 
 import { Routes, Route } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
 
 import { lazy, 
-  // useEffect
+  useEffect
  } from "react";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { RestrictedRoute } from "./RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
+import Loader from "./Loader/Loader";
 //import { Header } from "./Header/Header";
 //import UserBarBtn from "./UserBarBtn/UserBarBtn";
 
@@ -29,15 +30,15 @@ const MainTransactionsPage = lazy(() => import("../pages/MainTransactionsPage/Ma
 
 
 export const App = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
-  // useEffect(() => {
-  //   dispatch(refreshUser());
-  // }, [dispatch]);
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
 
-  return isRefreshing ? (<b>Refreshing user...</b>) : (
+  return isRefreshing ? (<Loader />) : (
 
     <Routes>
 

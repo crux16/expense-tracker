@@ -5,8 +5,10 @@ import { BgImageWrapper } from '../../components/BgImageWrapper/BgImageWrapper';
 import  AllUsersTab from '../../components/AllUsersTab/AllUsersTab';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import { HeroContent } from '../../components/HeroContent/HeroContent'
+// import { useAuth } from 'hooks/useAuth';
 
 const HomePage = () => {
+  // const { isLoggedIn } = useAuth();
   const isDesktop = useMediaQuery('(min-width: 1439px)');
   return (
     <HelmetProvider>

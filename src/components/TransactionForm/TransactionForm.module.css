@@ -13,7 +13,16 @@
 }
 
 .label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     color: var(--text-color)
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .subDate {
