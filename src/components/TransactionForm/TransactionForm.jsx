@@ -42,7 +42,6 @@ export const TransactionForm = () => {
             <label className={css.label} style={{width:'100%'}}><span>Category:</span>
             <Input sx={{
               border:'1px solid var(--subText-color)',
-              width: '100%',
               borderRadius: '12px',
               padding: '12px 18px',
               fontFamily: 'inherit',
@@ -53,7 +52,6 @@ export const TransactionForm = () => {
             <label className={css.label} style={{width:'100%'}}><span>Sum:</span>
             <Input sx={{
               border:'1px solid var(--subText-color)',
-              width: '100%',
               borderRadius: '12px',
               padding: '12px 18px',
               fontFamily: 'inherit',

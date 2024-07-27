@@ -1,12 +1,13 @@
 .container {
     display: grid;
-    
+    grid-template-areas: 
+    'text text text text text text'
+    'amount amount amount amount amount amount'
+    'form form form form form form'
+    'chart chart chart chart chart chart';
+    gap: 40px;
+
     @media screen and (min-width:768px) {
-        grid-template-areas: 
-        'text text text text text text'
-        'amount amount amount amount amount amount'
-        'chart chart chart chart chart chart'
-        'form form form form form form';
         padding: 59px 100px;
         gap: 40px 44px;
     }

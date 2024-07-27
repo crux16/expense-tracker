@@ -5,10 +5,11 @@ import { BgImageWrapper } from '../../components/BgImageWrapper/BgImageWrapper';
 import  AllUsersTab from '../../components/AllUsersTab/AllUsersTab';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import { HeroContent } from '../../components/HeroContent/HeroContent'
-// import { useAuth } from 'hooks/useAuth';
+import { useAuth } from 'hooks/useAuth';
 
 const HomePage = () => {
-  // const { isLoggedIn } = useAuth();
+  const { isLoggedIn } = useAuth();
+  console.log(isLoggedIn);
   const isDesktop = useMediaQuery('(min-width: 1439px)');
   return (
     <HelmetProvider>
@@ -19,7 +20,7 @@ const HomePage = () => {
         <div className={css.container}>
           <div>
           <HeroContent/>
-          <AuthNav />
+          {!isLoggedIn && <AuthNav />}
           </div>
           <div className={css.authNavContainer}>
             {isDesktop ? <AllUsersTab /> : null}

@@ -6,11 +6,12 @@ import { Button } from 'components/Button/Button';
 import { NavLink } from 'react-router-dom';
 import useMediaQuery from 'hooks/useMediaQuery';
 import { BgImageWrapper } from 'components/BgImageWrapper/BgImageWrapper';
-
+import { useAuth } from 'hooks/useAuth';
 
 
 export const LoginForm = () => {
   const isDesktop = useMediaQuery('(min-width: 1439px)');
+  const { isLoading } = useAuth();
 
   const dispatch = useDispatch();
 
@@ -44,7 +45,7 @@ export const LoginForm = () => {
             <Input type='email' name='email'>Email</Input>
             <Input type='password' name='password'>Password</Input>
             <span className={css.button}>
-              <Button type="submit" variant='cover'>Sign In</Button>
+              <Button type="submit" variant='cover'>{isLoading ? <span className={css.loader}></span> :  <span>Sign In</span>}</Button>
               <label className={css.subHeader}>Dont't have an account? <NavLink to='/signup' className={css.anchor}>Sign Up</NavLink></label>
             </span>
           </form>
