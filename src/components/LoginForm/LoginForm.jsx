@@ -10,8 +10,12 @@ import { useAuth } from 'hooks/useAuth';
 
 
 export const LoginForm = () => {
-  const isDesktop = useMediaQuery('(min-width: 1439px)');
+
+  const isDesktop = useMediaQuery('(min-width: 1157px)');
+
+
   const { isLoading } = useAuth();
+
 
   const dispatch = useDispatch();
 

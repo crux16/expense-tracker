@@ -1,22 +1,22 @@
 .tabDiv {
     background-color: var(--text-color);
-    height: 40px;
-    width: 180px;
+    height: 81px;
+    width: 248px;
     border-radius: 15px;
-    padding: 10px 10px 15px;
+    padding: 10px;
     display: flex;
     align-content: center;
-    align-items:flex-end;
+    align-items:center;
     justify-content: space-around;
-    position: relative;
+    position: absolute;
     margin-left: 20px;
     
 }
 
 .arrow {
     background-color: var(--theme-color);
-    height: 30px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
     border-radius: 10px;
     display: flex;
     align-content: center;
@@ -25,21 +25,24 @@
 }
 
 .balanceDiv {
-    color: rgb(17, 16, 28, 50%);
-    font-size: 10px;
+    font-family: Suisse Intl;
+    color: #11101c80;
+    font-size: 12px;
     margin-bottom: 5px;
 }
 
 .balance {
+    font-family: Suisse Intl;
     color: var(--bg-color);
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: bolder;
 
 }
 
 .percentDiv {
+    font-family: Suisse Intl;
     color: #02B15A;
-    background-color: rgb(2, 177, 90, 15%);
+    background-color: #02b15a26;
     font-size: 12px;
     height: 22px;
     width: 58px;
@@ -50,12 +53,12 @@
 }
 
 
-@media screen and (min-width: 500px)
+@media screen and (min-width: 768px)
 { 
     .tabDiv {
-        height: 88px;
-        width: 280px;
-        padding: 10px 10px 35px;
+        height: 121px;
+        width: 303px;
+        /* padding: 10px 10px 35px; */
         margin-left: 30px;
         
     }
@@ -69,27 +72,19 @@
 
     .balanceDiv {
        
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 15px;
     }
     
     .balance {
     
         font-size: 24px;
-        font-weight: 700;
+        font-weight: bolder;
     
     }
 
     .arrow {
-        height: 50px;
-        width: 50px;
+        height: 43px;
+        width: 43px;
     }
 }
-
-/* @media screen and (min-width: 1439px)
-{ 
-    .tabDiv {
-        margin-left: 20px;
-        
-    }
-} */
