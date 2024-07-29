@@ -3,9 +3,11 @@ import { useEffect } from 'react';
 // import { useState } from 'react';
 
 
-function Modal({ closeModal, children }) {
+function Modal({ closeModal, children, open }) {
 
   useEffect(() => {
+    if (!open) return;
+
     const handleKeyDown = e => {
       if (e.code === 'Escape');
       closeModal();
@@ -21,7 +23,9 @@ function Modal({ closeModal, children }) {
       body.style.overflow = 'auto';
     };
     
-  }, [closeModal]);
+  }, [closeModal, open]);
+
+  if (!open) return null;
 
     // const calculateDailyRate = () => {
     // const bmr = 10 * currentWeight + 6.25 * height - 5 * age - 161;
@@ -34,7 +38,7 @@ function Modal({ closeModal, children }) {
 
   return (
     <div className={css.modalBackground}>
-      <div className={css.modalBackground} onClick={closeModal}>
+      <div className={css.modalOverlay} onClick={closeModal}>
       </div>
       <div className={css.modalContainer}>
         {children}

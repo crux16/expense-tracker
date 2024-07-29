@@ -7,13 +7,11 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 import { HeroContent } from '../../components/HeroContent/HeroContent'
 import { useAuth } from 'hooks/useAuth';
 
+
 const HomePage = () => {
 
   const { isLoggedIn } = useAuth();
   const isDesktop = useMediaQuery('(min-width: 1158px)');
-
-
-
 
 
   return (

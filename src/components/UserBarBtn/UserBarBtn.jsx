@@ -67,7 +67,9 @@ export default function UserBarBtn() {
 
   const dispatch = useDispatch();
 
-  const { isLoggedIn, user } = useAuth();
+  // const { isLoggedIn, user } = useAuth();
+
+  const { user } = useAuth();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -81,6 +83,8 @@ export default function UserBarBtn() {
     setAnchorEl(null);
     dispatch(logOut());
   };
+
+  const userName = user?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
 
   return (
     <>
@@ -97,10 +101,15 @@ export default function UserBarBtn() {
           endIcon={<KeyboardArrowDownIcon />}
         >
 
-          <Avatar sx={{ width: 32, height: 32 }} alt="scarlett">{!isLoggedIn?'S':user.name[0]}</Avatar>
+          {/* <Avatar sx={{ width: 32, height: 32 }} alt="scarlett">{!isLoggedIn?'S':user.name[0]}</Avatar> */}
+
+          <Avatar sx={{ width: 32, height: 32 }} alt={userName}>
+            {userName[0]}
+          </Avatar>
 
           <Typography sx={{ minWidth: 100 }}>
-            {!isLoggedIn?'Scarlett':user.name}
+            {/* {!isLoggedIn?'Scarlett':user.name} */}
+            {userName}
           </Typography>
 
         </Button>
