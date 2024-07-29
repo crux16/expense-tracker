@@ -1,0 +1,25 @@
+.menuContainer
+{
+    /* background: var(--theme-color); */
+    width: 100vw;
+    height: 100vh;
+}
+
+.userBarDiv {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.transHisDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 0 20px;
+}

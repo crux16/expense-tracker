@@ -4,10 +4,7 @@ import { TransactionsTotalAmount } from 'components/TransactionsTotalAmount/Tran
 import { TransactionsChart } from 'components/TransactionsChart/TransactionsChart';
 import { TransactionForm } from 'components/TransactionForm/TransactionForm';
 
-
 const MainTransactionsPage = () => {
-
-  
 
   return (
     <HelmetProvider>

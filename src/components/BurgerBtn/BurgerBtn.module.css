@@ -1,0 +1,18 @@
+.burgerBtn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: none;
+}
+
+.burgerBtn svg {
+    width: 24px; 
+    height: 24px; 
+  }
+  
+  /* Display the burger button only on small screens */
+  @media (max-width: 1157px) {
+    .burgerBtn {
+      display: block;
+    }
+  }
