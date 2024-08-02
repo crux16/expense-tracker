@@ -2,7 +2,7 @@ import React from 'react';
 // import Modal from '../Modal';
 import TransactionsHistoryNav from '../../TransactionsHistoryNav/TransactionsHistoryNav';
 import css from './ModalBurgerMenu.module.css';
-import UserBarBtn from 'components/UserBarBtn/UserBarBtn';
+import { UserBarBtn } from 'components/UserBarBtn/UserBarBtn';
 
 function ModalBurgerMenu() {
   return (
@@ -11,9 +11,9 @@ function ModalBurgerMenu() {
         <UserBarBtn />
       </div>
       <div className={css.transHisDiv}>
-        <TransactionsHistoryNav/>
+        <TransactionsHistoryNav />
       </div>
-      
+
     </div>
   )
 }
