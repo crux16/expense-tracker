@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/expense-tracker/static/css/main.2f8005a9.css",
-    "main.js": "/expense-tracker/static/js/main.7a15fed5.js",
+    "main.js": "/expense-tracker/static/js/main.6c858d8b.js",
     "static/css/199.214b071e.chunk.css": "/expense-tracker/static/css/199.214b071e.chunk.css",
     "static/js/199.c9c0de17.chunk.js": "/expense-tracker/static/js/199.c9c0de17.chunk.js",
     "static/css/775.d35772f1.chunk.css": "/expense-tracker/static/css/775.d35772f1.chunk.css",
@@ -9,10 +9,10 @@
     "static/css/251.0401cf61.chunk.css": "/expense-tracker/static/css/251.0401cf61.chunk.css",
     "static/js/251.ada8f331.chunk.js": "/expense-tracker/static/js/251.ada8f331.chunk.js",
     "static/css/258.89d9001a.chunk.css": "/expense-tracker/static/css/258.89d9001a.chunk.css",
-    "static/js/258.27ef1bae.chunk.js": "/expense-tracker/static/js/258.27ef1bae.chunk.js",
+    "static/js/258.51ada564.chunk.js": "/expense-tracker/static/js/258.51ada564.chunk.js",
     "static/js/256.93491b86.chunk.js": "/expense-tracker/static/js/256.93491b86.chunk.js",
     "static/js/50.8b776f2e.chunk.js": "/expense-tracker/static/js/50.8b776f2e.chunk.js",
-    "static/js/657.c4142b2a.chunk.js": "/expense-tracker/static/js/657.c4142b2a.chunk.js",
+    "static/js/670.4e3fd3cc.chunk.js": "/expense-tracker/static/js/670.4e3fd3cc.chunk.js",
     "static/media/hero-desk.png": "/expense-tracker/static/media/hero-desk.2623515c80a765ff5e50.png",
     "static/media/hero-tab.png": "/expense-tracker/static/media/hero-tab.f95bf92e6942450910e7.png",
     "static/media/Dakota.png": "/expense-tracker/static/media/Dakota.784159fd19e05f5cc651.png",
@@ -25,7 +25,7 @@
     "static/media/arrow.svg": "/expense-tracker/static/media/arrow.eff1945058dea01916f9db8bb673738a.svg",
     "static/media/burger.svg": "/expense-tracker/static/media/burger.f8c8d8a95a761e395f8398e0cc9001a2.svg",
     "main.2f8005a9.css.map": "/expense-tracker/static/css/main.2f8005a9.css.map",
-    "main.7a15fed5.js.map": "/expense-tracker/static/js/main.7a15fed5.js.map",
+    "main.6c858d8b.js.map": "/expense-tracker/static/js/main.6c858d8b.js.map",
     "199.214b071e.chunk.css.map": "/expense-tracker/static/css/199.214b071e.chunk.css.map",
     "199.c9c0de17.chunk.js.map": "/expense-tracker/static/js/199.c9c0de17.chunk.js.map",
     "775.d35772f1.chunk.css.map": "/expense-tracker/static/css/775.d35772f1.chunk.css.map",
@@ -33,13 +33,13 @@
     "251.0401cf61.chunk.css.map": "/expense-tracker/static/css/251.0401cf61.chunk.css.map",
     "251.ada8f331.chunk.js.map": "/expense-tracker/static/js/251.ada8f331.chunk.js.map",
     "258.89d9001a.chunk.css.map": "/expense-tracker/static/css/258.89d9001a.chunk.css.map",
-    "258.27ef1bae.chunk.js.map": "/expense-tracker/static/js/258.27ef1bae.chunk.js.map",
+    "258.51ada564.chunk.js.map": "/expense-tracker/static/js/258.51ada564.chunk.js.map",
     "256.93491b86.chunk.js.map": "/expense-tracker/static/js/256.93491b86.chunk.js.map",
     "50.8b776f2e.chunk.js.map": "/expense-tracker/static/js/50.8b776f2e.chunk.js.map",
-    "657.c4142b2a.chunk.js.map": "/expense-tracker/static/js/657.c4142b2a.chunk.js.map"
+    "670.4e3fd3cc.chunk.js.map": "/expense-tracker/static/js/670.4e3fd3cc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f8005a9.css",
-    "static/js/main.7a15fed5.js"
+    "static/js/main.6c858d8b.js"
   ]
 }
