@@ -20,7 +20,7 @@ export const Navigation = () => {
       </NavLink>
       {isLoggedIn && (
         <NavLink
-          to="/mainTransactionsPage"
+          to="/transactions"
           className={({ isActive }) => (isActive ? css.linkActive : css.link)}
         >
           Transactions

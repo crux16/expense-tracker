@@ -27,7 +27,7 @@ const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
 
 const MainTransactionsPage = lazy(() => import("../pages/MainTransactionsPage/MainTransactionsPage"));
 
-
+const NotFound = lazy(()=> import("../pages/NotFound/NotFound"));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -45,11 +45,13 @@ export const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
 
-        <Route path="/signup" element={<RestrictedRoute  redirectTo="/mainTransactionsPage" component={<RegisterPage />} />} />
+        <Route path="/signup" element={<RestrictedRoute  redirectTo="/transactions" component={<RegisterPage />} />} />
 
-        <Route path="/login" element={<RestrictedRoute redirectTo="/mainTransactionsPage" component={<LoginPage />} />} />
+        <Route path="/login" element={<RestrictedRoute redirectTo="/transactions" component={<LoginPage />} />} />
 
-        <Route path="/mainTransactionsPage" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
+        <Route path="/transactions" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
+        
+        <Route path='*' element={<NotFound />} />
 
         {/* <Route path="/mainTransactionsPage" component={<MainTransactionsPage />} /> */}
       </Route>
