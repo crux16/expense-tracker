@@ -46,6 +46,18 @@ const categorySlice = createSlice({
         state.isLoading = false;
         state.error = null;
         state.items = state.items.filter(item => item.id !== action.payload.id);
+      })
+      .addCase(updateCategory.pending, state => {
+        state.isLoading = true;
+      })
+      .addCase(updateCategory.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+      .addCase(updateCategory.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.error = null;
+        state.items = state.items.map((item)=> (item.id === action.payload.id) ? action.payload : item );
       });
   },
 });
