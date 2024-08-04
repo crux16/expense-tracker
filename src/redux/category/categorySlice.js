@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCategory, addCategory, deleteCategory } from './categoryOperation';
+import { fetchCategory, addCategory, deleteCategory, updateCategory } from './categoryOperation';
 
 const categorySlice = createSlice({
   name: 'category',
