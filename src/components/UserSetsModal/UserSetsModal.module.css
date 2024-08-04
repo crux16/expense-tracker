@@ -1,0 +1,20 @@
+.modalForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo {
+    display: flex;
+    border-radius: 50%;
+
+    border: 2px solid #0ef387;
+    /* border-color: blueviolet; */
+    height: 100px;
+    width: 100px;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
