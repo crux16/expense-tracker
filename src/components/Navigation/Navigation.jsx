@@ -12,15 +12,15 @@ export const Navigation = () => {
       <NavLink to="/" >
         <Logo><span><Icon icon='logo' /></span><span>ExpenseTracker</span></Logo>
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/"
         className={({ isActive }) => (isActive ? css.linkActive : css.link)}
       >
         Home
-      </NavLink>
+      </NavLink> */}
       {isLoggedIn && (
         <NavLink
-          to="/mainTransactionsPage"
+          to="/transactions/expense"
           className={({ isActive }) => (isActive ? css.linkActive : css.link)}
         >
           Transactions

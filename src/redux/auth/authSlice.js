@@ -4,7 +4,7 @@ import { register, logIn, logOut, refreshUser } from './authOperations';
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: { name: null, email: null },
+    user: { name: null, email: null, avatarUrl: null },
     token: null,
     refreshToken: null,
     sid: null,
@@ -18,7 +18,12 @@ const authSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(register.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        const {name, email, avatarUrl } = action.payload.user;
+        state.user = { 
+          name:name, 
+          email:email,
+          avatarUrl:avatarUrl 
+        }
         state.token = action.payload.accessToken;
         state.refreshToken = action.payload.refreshToken;
         state.sid = action.payload.sid
@@ -32,7 +37,12 @@ const authSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(logIn.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        const {name, email, avatarUrl } = action.payload.user;
+        state.user = { 
+          name:name, 
+          email:email, 
+          avatarUrl:avatarUrl 
+        }
         state.token = action.payload.accessToken;
         state.refreshToken = action.payload.refreshToken;
         state.sid = action.payload.sid
@@ -43,7 +53,7 @@ const authSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(logOut.fulfilled, state => {
-        state.user = { name: null, email: null };
+        state.user = { name: null, email: null, avatarUrl:null };
         state.token = null;
         state.isLoggedIn = false;
       })
@@ -51,7 +61,15 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
-        state.user = action.payload.user;
+        const {name, email, avatarUrl } = action.payload.user;
+        state.user = { 
+          name:name, 
+          email:email, 
+          avatarUrl:avatarUrl 
+        }
+        state.token = action.payload.accessToken;
+        state.refreshToken = action.payload.refreshToken;
+        state.sid = action.payload.sid; 
         state.isLoggedIn = true;
         state.isRefreshing = false;
       })
