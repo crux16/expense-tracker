@@ -17,7 +17,9 @@ import Logout from '@mui/icons-material/Logout';
 import { useAuth } from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/authOperations';
-import { Accordion, AccordionSummary, AccordionActions, ButtonGroup, Tooltip, CssBaseline, Modal } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionActions, ButtonGroup, Tooltip, 
+  // CssBaseline, 
+  Modal } from '@mui/material';
 import { UserSetsModal } from 'components/UserSetsModal/UserSetsModal';
 
 
@@ -25,6 +27,8 @@ import { UserSetsModal } from 'components/UserSetsModal/UserSetsModal';
 export const UserBarBtn = () => {
 
   const dispatch = useDispatch();
+
+  // const { isLoggedIn, user } = useAuth();
 
   const { user } = useAuth();
 
@@ -56,9 +60,9 @@ export const UserBarBtn = () => {
   const userName = user?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
 
   return (
-    <>
-      <CssBaseline />
-      <div>
+    <div >
+      {/* <CssBaseline /> */}
+      <div >
         <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
           <AccordionSummary sx={{ display: 'flex' }}
             expandIcon={<ExpandMoreIcon />}
@@ -99,9 +103,6 @@ export const UserBarBtn = () => {
         <UserSetsModal open={isModalOpen} onClose={handleCloseModal} />
       </Modal>
 
-
-
-
-    </>
+    </div>
   );
-};
+}

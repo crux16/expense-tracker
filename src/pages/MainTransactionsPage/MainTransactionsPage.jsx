@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const MainTransactionsPage = () => {
-  const { TransactionsType='expense' } = useParams();
+  const { transactionsType = 'expense' } = useParams();
   const [ type, setType ] = useState('expense');  
 
   const radioSelect = (e) =>{
@@ -16,9 +16,9 @@ const MainTransactionsPage = () => {
   }
 
   useEffect(()=>{
-    const type = TransactionsType;
+    const type = transactionsType;
     setType(type);
-  },[setType,TransactionsType])
+  },[setType,transactionsType])
 
   return (
     <HelmetProvider>

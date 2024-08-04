@@ -6,8 +6,12 @@ import { DatePicker, LocalizationProvider, TimePicker } from '@mui/x-date-picker
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Input } from 'components/Input/Input';
 import { Button } from 'components/Button/Button';
+// import { useDispatch } from 'react-redux';
+// import { currentUser } from '../../redux/user/userOperations';
 
-export const TransactionForm = () => {
+export const TransactionForm = ({radioChange}) => {
+    // const dispatch = useDispatch();
+
   const radio = {
     color: 'var(--subText-color)',
     '&.Mui-checked': {
@@ -21,6 +25,7 @@ export const TransactionForm = () => {
         aria-labelledby="radio"
         defaultValue="expense"
         name="category"
+        onChange={radioChange}
         row
       >
         <FormControlLabel value="expense" control={<Radio sx={radio} />} label="expense" />

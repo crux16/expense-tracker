@@ -1,26 +1,33 @@
 import { Box, Button, ButtonGroup, FormControl, InputLabel, MenuItem, Modal, Select, TextField, Typography } from '@mui/material';
-import React, { useState, useRef } from 'react';
+import React, { useState, 
+    // useRef, 
+    useEffect } from 'react';
 //import { user } from "../../hooks/useAuth";
 import { useAuth } from 'hooks/useAuth';
 import css from "./UserSetsModal.module.css";
+import dummyPhoto from '../../Asset/images/users/Jennifer.png';
+import { useDispatch } from 'react-redux';
+import { updateAvatar } from '../../redux/auth/authOperations';
 
 
 
 export const UserSetsModal = ({ open, onClose }) => {
     const [name, setName] = useState("");
     const [currency, setCurrency] = useState("");
-    //const [avatar, setAvatar] = useState(null);
-    const fileRef = useRef(null);
-    const [image, setImage] = useState(null);
+    const [avatar, setAvatar] = useState(null);
+    // const fileRef = useRef(null);
     const [formData, setFormData] = useState("");
 
-    const { user } = useAuth();
+    const dispatch = useDispatch();
+
+    const { user, isLoading } = useAuth();
 
 
     const userName = user?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
+    const userAvatar = user.avatarUrl || dummyPhoto;
 
     const handleAvatarChange = (e) => {
-        setImage(e.target.files[0]);
+        dispatch(updateAvatar(e.target.files[0]));
     };
 
     const handleRemoveAvatar = () => {
@@ -40,6 +47,10 @@ export const UserSetsModal = ({ open, onClose }) => {
     const handleSaveChanges = () => {
 
     };
+
+    useEffect(()=>{
+        setAvatar(userAvatar)
+    },[setAvatar,userAvatar]);
 
     return (
         <>
@@ -62,16 +73,18 @@ export const UserSetsModal = ({ open, onClose }) => {
 
                     <form className={css.modalForm}>
 
-                        <img className={css.photo} src={formData.profilePicture} alt={userName[0]} value={image}
-                            onClick={() => fileRef.current.click()}
-                        />
+                    <span className={css.photo}>
+                        <img className={css.photo} src={avatar} alt={userName[0]}  />
+                        {isLoading && <span className={`${css.loader}`}></span>}
+                    </span>
                         <ButtonGroup size="small" mb="2rem" sx={{ gap: '10px' }}  >
                             <Button
                                 variant="contained" component="label" fullWidth
                                 sx={{ mt: 2 }}>Upload Avatar Photo
                                 <input
                                     type="file"
-                                    ref={fileRef} accept="image/*" onChange={handleAvatarChange}
+                                    name='image'
+                                    accept="image/*" onChange={handleAvatarChange}
                                     hidden
                                 />
                             </Button>
