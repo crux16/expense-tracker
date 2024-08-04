@@ -1,7 +1,7 @@
 import { Chart } from "./PieChart/PieChart"
 import css from './TransactionsChart.module.css';
 
-export const TransactionsChart = () => {
+export const TransactionsChart = ({type}) => {
     const data = [
         { id: 1, name: 'Hobby', value: 45, color: '#0EBB69' },
         { id: 2, name: 'Products', value: 25, color: '#0EF387' },
@@ -11,7 +11,7 @@ export const TransactionsChart = () => {
 
     return (
         <div className={css.container}>
-            <p className={css.subHeader} style={{marginLeft:'40px'}}>Expenses categories</p>
+            <p className={`${css.subHeader} ${css.title}`} style={{marginLeft:'40px'}}>{type}s categories</p>
             <div className={css.subContainer}>
                 <div className={css.chart}>
                     <Chart data={data}/>

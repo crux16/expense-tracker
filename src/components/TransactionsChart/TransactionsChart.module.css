@@ -5,6 +5,11 @@
     background-color: #171719;    
 }
 
+
+.title::first-letter {
+  text-transform: capitalize;
+}
+
 .subContainer {
     display: grid;
     position: relative;

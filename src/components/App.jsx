@@ -45,11 +45,11 @@ export const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
 
-        <Route path="/signup" element={<RestrictedRoute  redirectTo="/transactions" component={<RegisterPage />} />} />
+        <Route path="/signup" element={<RestrictedRoute  redirectTo="/transactions/expense" component={<RegisterPage />} />} />
 
-        <Route path="/login" element={<RestrictedRoute redirectTo="/transactions" component={<LoginPage />} />} />
+        <Route path="/login" element={<RestrictedRoute redirectTo="/transactions/expense" component={<LoginPage />} />} />
 
-        <Route path="/transactions" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
+        <Route path="/transactions/:transactionsType" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
         
         <Route path='*' element={<NotFound />} />
 
