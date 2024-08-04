@@ -17,15 +17,13 @@ import Logout from '@mui/icons-material/Logout';
 import { useAuth } from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/authOperations';
-import { Accordion, AccordionSummary, AccordionActions, CssBaseline } from '@mui/material';
+import { Accordion, AccordionSummary, AccordionActions, ButtonGroup, Tooltip, CssBaseline } from '@mui/material';
 
 
 
 export const UserBarBtn = () => {
 
   const dispatch = useDispatch();
-
-  // const { isLoggedIn, user } = useAuth();
 
   const { user } = useAuth();
 
@@ -41,7 +39,7 @@ export const UserBarBtn = () => {
   //   setAnchorEl(event.currentTarget);
   // };
 
-  const handleClose = () => {
+  const handleLogout = () => {
     dispatch(logOut());
   };
 
@@ -67,15 +65,19 @@ export const UserBarBtn = () => {
           </AccordionSummary>
 
           <AccordionActions sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'left' }}>
-            <Button>
-              <ManageAccountsIcon />
-              <Typography sx={{ marginLeft: '30px' }}>Profile Settings</Typography>
-            </Button>
-
-            <Button onClick={handleClose}>
-              <Logout />
-              <Typography sx={{ marginLeft: '15px' }}>Logout</Typography>
-            </Button>
+            <ButtonGroup
+              orientation="vertical">
+              <Tooltip arrow title="Go to profile settings" >
+                <Button>
+                  <ManageAccountsIcon />
+                  <Typography sx={{ marginLeft: '30px', fontSize: '20px' }}>Profile Settings</Typography>
+                </Button></Tooltip>
+              <Tooltip arrow title="Logout, yes?" >
+                <Button onClick={handleLogout}>
+                  <Logout />
+                  <Typography sx={{ marginLeft: '15px', fontSize: '19px' }}>Logout</Typography>
+                </Button></Tooltip>
+            </ButtonGroup>
           </AccordionActions>
 
         </Accordion>
@@ -84,4 +86,4 @@ export const UserBarBtn = () => {
 
     </>
   );
-}
+};
