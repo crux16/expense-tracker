@@ -3,22 +3,35 @@ import css from './MainTransactionsPage.module.css';
 import { TransactionsTotalAmount } from 'components/TransactionsTotalAmount/TransactionsTotalAmount';
 import { TransactionsChart } from 'components/TransactionsChart/TransactionsChart';
 import { TransactionForm } from 'components/TransactionForm/TransactionForm';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { currentUser } from '../../redux/user/userOperations';
+import { useUser } from 'hooks/useUser';
+import { useDispatchOnce } from 'hooks/useDispatchOnce';
+import { useDispatch } from 'react-redux';
 
 const MainTransactionsPage = () => {
-  const { transactionsType = 'expense' } = useParams();
-  const [ type, setType ] = useState('expense');  
+  const dispatch = useDispatch();
+  const { transactionsType } = useParams();
+  const navigate = useNavigate();
+  const [ type, setType ] = useState('expenses');
+  const { info } = useUser();
 
   const radioSelect = (e) =>{
-    console.log(e.target.value);
-    setType(e.target.value);
+    const value = e.target.value;
+    setType(value);
+    navigate(`/transactions/${value}`);
   }
 
+  useDispatchOnce(dispatch,currentUser());
+
   useEffect(()=>{
-    const type = transactionsType;
-    setType(type);
-  },[setType,transactionsType])
+    if(!transactionsType){
+    navigate(`/transactions/${transactionsType || type}`);
+    }
+  },
+    [dispatch,navigate,transactionsType, type, info]
+  )
 
   return (
     <HelmetProvider>
@@ -27,7 +40,7 @@ const MainTransactionsPage = () => {
       </Helmet>
       <div className={css.container}>
         <div className={css.text}>
-        <h3 className={css.title}>{type} Log</h3>
+        <h3 className={css.title}>{transactionsType} Log</h3>
         <p className={css.subText}>
             Capture and organize every penny spent with ease! A clear view of your financial habit at
             <br />your fingertips.</p>
@@ -36,10 +49,10 @@ const MainTransactionsPage = () => {
         <TransactionsTotalAmount />
         </div >
         <div className={`${css.chart} ${css.subContainer}`}>
-          <TransactionsChart type={type} />
+        <TransactionsChart type={type} />
         </div>
         <div className={`${css.form} ${css.subContainer}`}>
-        <TransactionForm radioChange={radioSelect} />
+        <TransactionForm radioChange={radioSelect} option={transactionsType} />
       </div>
       </div>
     </HelmetProvider>

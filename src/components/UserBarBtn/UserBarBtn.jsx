@@ -14,13 +14,14 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 import Logout from '@mui/icons-material/Logout';
 //import ListItemIcon from '@mui/material/ListItemIcon';
-import { useAuth } from 'hooks/useAuth';
+// import { useAuth } from 'hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/auth/authOperations';
 import { Accordion, AccordionSummary, AccordionActions, ButtonGroup, Tooltip, 
   // CssBaseline, 
   Modal } from '@mui/material';
 import { UserSetsModal } from 'components/UserSetsModal/UserSetsModal';
+import { useUser } from 'hooks/useUser';
 
 
 
@@ -30,7 +31,9 @@ export const UserBarBtn = () => {
 
   // const { isLoggedIn, user } = useAuth();
 
-  const { user } = useAuth();
+  // const { user } = useAuth();
+
+  const { info } = useUser();
 
   const [expanded, setExpanded] = useState(false);
 
@@ -57,7 +60,7 @@ export const UserBarBtn = () => {
     setIsModalOpen(false);
   }
 
-  const userName = user?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
+  const userName = info?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
 
   return (
     <div >

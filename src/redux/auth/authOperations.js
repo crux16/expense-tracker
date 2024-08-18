@@ -78,23 +78,12 @@ export const refreshUser = createAsyncThunk(
     // const persistedToken = state.auth.token;
     // setAuthHeader(refreshToken);
     const { data } = await axios.post('/auth/refresh',{sid:sid},{headers:{Authorization:`Bearer ${refreshToken}`}});
-
+      setAuthHeader(data.accessToken);
     // if (persistedToken === null) {
     //   // If there is no token, exit without performing any request
     //   return thunkAPI.rejectWithValue('Unable to fetch user');
     // }
-
-    try {
-      // If there is a token, add it to the HTTP header and perform the request
-      setAuthHeader(data.accessToken);
-      const res = await axios.get('/users/current',_,{headers:{Authorization:`Bearer ${data.accessToken}`}});
-      return {
-        user:res.data,
-        ...data
-      };
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.message);
-    }
+      return data;
     }catch(error) {
       // If there is no token, exit without performing any request
       return thunkAPI.rejectWithValue('Unable to fetch user');
@@ -102,91 +91,3 @@ export const refreshUser = createAsyncThunk(
   }
 );
 
-
-export const getLastParamWithoutExtension = (url) => {
-  // Remove query parameters if present
-  const path = url.split('?')[0];
-
-  // Split the URL by slashes
-  const parts = path.split('/');
-
-  // Get the last part of the URL
-  const lastPart = parts.pop() || parts.pop(); // handle trailing slash
-
-  // Remove the file extension if any
-  const lastPartWithoutExtension = lastPart.split('.').slice(0, -1).join('.');
-
-  return lastPartWithoutExtension;
-}
-
-/* 
-// get current user
-// 
-*/
-
-export const currentUser = createAsyncThunk(
-  'auth/current',
-  async(_,thunkAPI) =>{
-      try{
-          const { data } = await axios.get('users/current');
-          console.log(data);
-          return data;
-      } catch (error) {
-          return thunkAPI.rejectWithValue(error.message);
-      }
-  }
-)
-
-/* 
-* PATCH info user
-* specific name and currency
-*/
-
-export const infoUser = createAsyncThunk(
-  'auth/info',
-  async({name,currency},thunkAPI) => {
-      try{
-          const data = await axios.patch('users/info',{name,currency});
-          return data;
-      } catch (error) {
-          return thunkAPI.rejectWithValue(error.message);
-      }
-  }
-)
-
-/**  
-* PATCH avatar URL
-* Uploading avatar by creating url linked
-**/
-
-export const updateAvatar = createAsyncThunk(
-  'auth/updateAvatar',
-  async(avatarData,thunkAPI) =>{
-      try{
-          const formData = new FormData();
-          formData.append('avatar', avatarData);
-          const {data} = await axios.patch('users/avatar',formData);
-          return data;
-      } catch (error) {
-          return thunkAPI.rejectWithValue(error.message);
-      }
-  }
-)
-
-/**
-* REMOVE avatar URL
-* removing avatar from data string
-**/
-
-export const removeAvatar = createAsyncThunk(
-  'auth/removeAvatar',
-  async(avatarUrl,thunkAPI) =>{
-      try{
-          const avatarId = getLastParamWithoutExtension(avatarUrl);
-          const { data }  = await axios.delete(`users/avatar/${avatarId}`);
-          return data;
-      } catch (error) {
-          return thunkAPI.rejectWithValue(error.message);
-      }
-  }
-)

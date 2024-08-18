@@ -1,15 +1,19 @@
 import { Helmet, HelmetProvider } from "react-helmet-async"
+import {  useParams } from "react-router-dom"
 
 
-export const TransactionsHistoryPage = () =>{
+const TransactionsHistoryPage = () =>{
+    const { transactionsType } = useParams();
     return (
         <HelmetProvider>
         <Helmet>
-          <title>Transactions History</title>
+          <title>Transactions</title>
         </Helmet>
         <div>
-            <h2>Transactions History</h2>
+            <h2>Transactions {transactionsType}</h2>
         </div>
       </HelmetProvider>
     )
 }
+
+export default TransactionsHistoryPage;

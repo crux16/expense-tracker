@@ -1,7 +1,9 @@
+import { useParams } from "react-router-dom";
 import { Chart } from "./PieChart/PieChart"
 import css from './TransactionsChart.module.css';
 
-export const TransactionsChart = ({type}) => {
+export const TransactionsChart = () => {
+    const { transactionsType } =  useParams();
     const data = [
         { id: 1, name: 'Hobby', value: 45, color: '#0EBB69' },
         { id: 2, name: 'Products', value: 25, color: '#0EF387' },
@@ -11,7 +13,7 @@ export const TransactionsChart = ({type}) => {
 
     return (
         <div className={css.container}>
-            <p className={`${css.subHeader} ${css.title}`} style={{marginLeft:'40px'}}>{type}s categories</p>
+            <p className={`${css.subHeader} ${css.title}`} style={{marginLeft:'40px'}}>{transactionsType} categories</p>
             <div className={css.subContainer}>
                 <div className={css.chart}>
                     <Chart data={data}/>

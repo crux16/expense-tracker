@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchTransactions, createTransactions, updateTransactions, deleteTransactions } from './transactionsOperations';
+import { getTransactions, createTransactions, updateTransactions, deleteTransactions } from './transactionsOperations';
 
 const transactionsSlice = createSlice({
   name: 'transactions',
@@ -11,14 +11,14 @@ const transactionsSlice = createSlice({
   // reducers: {},
   extraReducers: builder => {
     builder
-      .addCase(fetchTransactions.pending, state => {
+      .addCase(getTransactions.pending, state => {
         state.isLoading = true;
       })
-      .addCase(fetchTransactions.rejected, (state, action) => {
+      .addCase(getTransactions.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       })
-      .addCase(fetchTransactions.fulfilled, (state, action) => {
+      .addCase(getTransactions.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
         state.items = action.payload;

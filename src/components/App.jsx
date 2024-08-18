@@ -7,12 +7,13 @@ import { Routes, Route } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout/SharedLayout";
 
 import { lazy, 
-  useEffect
+  // useEffect
  } from "react";
 import { useDispatch } from "react-redux";
 import { RestrictedRoute } from "./RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
 import Loader from "./Loader/Loader";
+import { useDispatchOnce } from "hooks/useDispatchOnce";
 //import { Header } from "./Header/Header";
 //import UserBarBtn from "./UserBarBtn/UserBarBtn";
 
@@ -27,15 +28,16 @@ const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
 
 const MainTransactionsPage = lazy(() => import("../pages/MainTransactionsPage/MainTransactionsPage"));
 
+const TransactionsHistoryPage = lazy(() => import('../pages/TransactionsHistoryPage/TransactionsHistoryPage'))
+
 const NotFound = lazy(()=> import("../pages/NotFound/NotFound"));
 
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
-  useEffect(() => {
-    dispatch(refreshUser());
-  }, [dispatch]);
+  useDispatchOnce(dispatch,refreshUser());
+
 
 
   return isRefreshing ? (<Loader />) : (
@@ -45,11 +47,15 @@ export const App = () => {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<WelcomePage />} />
 
-        <Route path="/signup" element={<RestrictedRoute  redirectTo="/transactions/expense" component={<RegisterPage />} />} />
+        <Route path="/signup" element={<RestrictedRoute  redirectTo="/transactions" component={<RegisterPage />} />} />
 
-        <Route path="/login" element={<RestrictedRoute redirectTo="/transactions/expense" component={<LoginPage />} />} />
+        <Route path="/login" element={<RestrictedRoute redirectTo="/transactions" component={<LoginPage />} />} />
+
+        <Route path="/transactions" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
 
         <Route path="/transactions/:transactionsType" element={<PrivateRoute redirectTo="/login" component={<MainTransactionsPage />} />} />
+
+        <Route path="/transactions/history/:transactionsType" element={<PrivateRoute redirectTo="/login" component={<TransactionsHistoryPage />} />} />
         
         <Route path='*' element={<NotFound />} />
 

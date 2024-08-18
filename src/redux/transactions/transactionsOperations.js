@@ -5,7 +5,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 
 
-export const fetchTransactions = createAsyncThunk(
+export const getTransactions = createAsyncThunk(
     'transactions/all',
     async(type,thunkAPI) =>{
         try{

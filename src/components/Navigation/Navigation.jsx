@@ -19,12 +19,20 @@ export const Navigation = () => {
         Home
       </NavLink> */}
       {isLoggedIn && (
+        <>
         <NavLink
-          to="/transactions/expense"
+          to="/transactions"
           className={({ isActive }) => (isActive ? css.linkActive : css.link)}
         >
           Transactions
         </NavLink>
+        <NavLink
+          to="/transactions/history/expenses"
+          className={({ isActive }) => (isActive ? css.linkActive : css.link)}
+        >
+          History
+        </NavLink>
+        </>
       )}
     </nav>
   );

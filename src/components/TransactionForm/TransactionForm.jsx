@@ -6,16 +6,49 @@ import { DatePicker, LocalizationProvider, TimePicker } from '@mui/x-date-picker
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { Input } from 'components/Input/Input';
 import { Button } from 'components/Button/Button';
+import { useParams } from 'react-router-dom';
+import './MuiCustomClass/MuiCustumClass.css';
 // import { useDispatch } from 'react-redux';
 // import { currentUser } from '../../redux/user/userOperations';
 
 export const TransactionForm = ({radioChange}) => {
     // const dispatch = useDispatch();
+    const { transactionsType } = useParams();
 
   const radio = {
     color: 'var(--subText-color)',
     '&.Mui-checked': {
       color: 'var(--theme-color)',
+    },
+    '&.Mui-disabled': {
+      color: 'var(--subText-color)',
+    }
+  };
+
+  const dateStyling = {
+    '.MuiInputBase-root': {
+      color: 'var(--subText-color)',
+      borderRadius: '8px',
+      borderWidth: '1px',
+      borderColor: 'var(--subText-color)',
+      border: '1px solid',
+      backgroundColor: '#0000',
+      outline:'none',
+    },
+    '.MuiInputBase-root:hover': {
+      borderColor: 'var(--theme-color)',
+    },
+    '.MuiInputBase-root:focus': {
+      borderColor: 'var(--theme-color)',
+    },
+    '.MuiInputBase-root:hover .MuiSvgIcon-root': {
+      fill: 'var(--theme-color)',
+    },
+    '.MuiInputBase-root:focus .MuiSvgIcon-root': {
+      fill: 'var(--theme-color)',
+    },
+    '.MuiSvgIcon-root': {
+      fill:'var(--text-color)',
     },
   };
 
@@ -23,23 +56,34 @@ export const TransactionForm = ({radioChange}) => {
     <form className={css.form}>
       <RadioGroup
         aria-labelledby="radio"
-        defaultValue="expense"
         name="category"
         onChange={radioChange}
         row
       >
-        <FormControlLabel value="expense" control={<Radio sx={radio} />} label="expense" />
-        <FormControlLabel value="income" control={<Radio sx={radio} />} label="income" />
+        <FormControlLabel 
+          value="expenses" 
+          control={<Radio sx={radio} />} 
+          label="expense" 
+          checked={transactionsType === 'expenses'} 
+          disabled={transactionsType !== 'expenses' && !radioChange}
+          />
+        <FormControlLabel 
+          value="incomes" 
+          control={<Radio sx={radio} />} 
+          label="income"  
+          checked={transactionsType === 'incomes'} 
+          disabled={transactionsType !== 'incomes' && !radioChange}
+          />
       </RadioGroup>
       <div className={css.date}>
-        <label className={css.label}><span>Date</span> <br />
+        <label className={css.label}><span>Date</span> 
           <LocalizationProvider dateAdapter={AdapterDayjs} >
-            <DatePicker />
+            <DatePicker name='date' sx={dateStyling}/>
           </LocalizationProvider>
         </label>
-        <label className={css.label}><span>Time</span><br />
+        <label className={css.label}><span>Time</span>
           <LocalizationProvider dateAdapter={AdapterDayjs} >
-            <TimePicker />
+            <TimePicker name='time'  ampm={false}  sx={dateStyling}  />
           </LocalizationProvider>
         </label>
       </div>

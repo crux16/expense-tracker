@@ -2,36 +2,41 @@ import { Box, Button, ButtonGroup, FormControl, InputLabel, MenuItem, Modal, Sel
 import React, { useState, 
     // useRef, 
     useEffect } from 'react';
-//import { user } from "../../hooks/useAuth";
-import { useAuth } from 'hooks/useAuth';
+//import { user } from "../../hooks/useAuth";   
+// import { useAuth } from 'hooks/useAuth';
+import { useUser } from 'hooks/useUser';
 import css from "./UserSetsModal.module.css";
 import dummyPhoto from '../../Asset/images/users/Jennifer.png';
 import { useDispatch } from 'react-redux';
-import { updateAvatar } from '../../redux/auth/authOperations';
+// import { updateAvatar } from '../../redux/auth/authOperations';
+import { updateAvatar, removeAvatar, infoUser } from '../../redux/user/userOperations';
+
 
 
 
 export const UserSetsModal = ({ open, onClose }) => {
-    const [name, setName] = useState("");
-    const [currency, setCurrency] = useState("");
-    const [avatar, setAvatar] = useState(null);
+    const { info, isLoading } = useUser();
+    const [name, setName] = useState(info.name);
+    const [currency, setCurrency] = useState(info.currency);
+    const [avatar, setAvatar] = useState(info.avatarUrl);
     // const fileRef = useRef(null);
     const [formData, setFormData] = useState("");
 
     const dispatch = useDispatch();
 
-    const { user, isLoading } = useAuth();
+    // const { user, isLoading } = useAuth();
 
 
-    const userName = user?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
-    const userAvatar = user.avatarUrl || dummyPhoto;
+    const userName = info?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
+    const userAvatar = info?.avatarUrl || dummyPhoto;
 
     const handleAvatarChange = (e) => {
+        e.preventDefault();
         dispatch(updateAvatar(e.target.files[0]));
     };
 
     const handleRemoveAvatar = () => {
-
+        dispatch(removeAvatar(avatar));
     };
 
     const handleChange = (e) => {
@@ -45,11 +50,11 @@ export const UserSetsModal = ({ open, onClose }) => {
     }
 
     const handleSaveChanges = () => {
-
+        dispatch(infoUser({name,currency}));
     };
 
     useEffect(()=>{
-        setAvatar(userAvatar)
+        setAvatar(userAvatar);
     },[setAvatar,userAvatar]);
 
     return (
@@ -74,7 +79,7 @@ export const UserSetsModal = ({ open, onClose }) => {
                     <form className={css.modalForm}>
 
                     <span className={css.photo}>
-                        <img className={css.photo} src={avatar} alt={userName[0]}  />
+                        <img className={css.photo} src={avatar} alt={name[0]}  />
                         {isLoading && <span className={`${css.loader}`}></span>}
                     </span>
                         <ButtonGroup size="small" mb="2rem" sx={{ gap: '10px' }}  >
@@ -104,16 +109,17 @@ export const UserSetsModal = ({ open, onClose }) => {
                         <Select
                             labelId="demo-simple-select-label"
                             id="demo-simple-select"
+                            defaultValue={currency}
                             value={currency}
                             label="Currency"
                             onChange={handleCurrencyChange}
                         >
-                            <MenuItem value="EUR">€ EUR</MenuItem>
-                            <MenuItem value="BTC">฿ BTC</MenuItem>
-                            <MenuItem value="JPY">¥ JPY</MenuItem>
-                            <MenuItem value="PHP">₱ PHP</MenuItem>
-                            <MenuItem value="UAH">₴ UAH</MenuItem>
-                            <MenuItem value="USD">$ USD</MenuItem>
+                            <MenuItem value="eur">€ EUR</MenuItem>
+                            <MenuItem value="btc">฿ BTC</MenuItem>
+                            <MenuItem value="jpy">¥ JPY</MenuItem>
+                            <MenuItem value="php">₱ PHP</MenuItem>
+                            <MenuItem value="uah">₴ UAH</MenuItem>
+                            <MenuItem value="usd">$ USD</MenuItem>
 
                         </Select>
 

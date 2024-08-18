@@ -1,0 +1,26 @@
+.MuiPickersLayout-contentWrapper {
+    background-color: var(--theme-color);
+  }
+  
+  .MuiPaper-root-MuiPickersPopper-paper {
+    background-color: var(--theme-color);
+  }
+  
+  .MuiButtonBase-root-MuiPickersDay-root {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .css-1wy8uaa-MuiButtonBase-root-MuiPickersDay-root.Mui-selected  {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  } 
+  .MuiPickersDay-root:not(.Mui-selected):hover  {
+    background: var(--theme-color);
+    color: var(--text-color);
+    border: 1px solid #fff;     
+  } 
+  
+  .MuiPickersDay-root.MuiPickersDay-today {
+    background-color: var(--subText-color);
+  }
