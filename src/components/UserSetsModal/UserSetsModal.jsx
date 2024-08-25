@@ -6,7 +6,7 @@ import React, { useState,
 // import { useAuth } from 'hooks/useAuth';
 import { useUser } from 'hooks/useUser';
 import css from "./UserSetsModal.module.css";
-import dummyPhoto from '../../Asset/images/users/Jennifer.png';
+// import dummyPhoto from '../../Asset/images/users/Jennifer.png';
 import { useDispatch } from 'react-redux';
 // import { updateAvatar } from '../../redux/auth/authOperations';
 import { updateAvatar, removeAvatar, infoUser } from '../../redux/user/userOperations';
@@ -28,7 +28,7 @@ export const UserSetsModal = ({ open, onClose }) => {
 
 
     const userName = info?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
-    const userAvatar = info?.avatarUrl || dummyPhoto;
+    const userAvatar = info?.avatarUrl || '';
 
     const handleAvatarChange = (e) => {
         e.preventDefault();

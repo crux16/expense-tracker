@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    gap: 40px 100px;
+    grid-template-areas: 
+    'title title'
+    'amount amount'
+    'list list';
+    @media screen and (min-width:1200px) {
+    grid-template-areas: 'title amount'
+    'list list';
+    }
+}
+
+.title {
+    grid-area: title;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.subContainer {
+    grid-area: list;
+    background-color: #171719;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+
+.totalAmount {
+    grid-area: amount;
+}

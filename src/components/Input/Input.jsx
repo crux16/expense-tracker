@@ -27,7 +27,7 @@ export const Input = ({type,name,children}) =>{
                 <input 
                 type={(showPassword && 'text') || type}
                 name={name}
-                placeholder={children}
+                placeholder={children.trim()}
                 className={css.input}
                 value={value}
                 onChange={input}
@@ -39,7 +39,7 @@ export const Input = ({type,name,children}) =>{
             default:
                 return (
                 <><input 
-                type={type} placeholder={children} 
+                type={type} placeholder={children.trim()} 
                 name={name}
                 className={css.input}
                 value={value}

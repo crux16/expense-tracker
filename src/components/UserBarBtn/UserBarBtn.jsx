@@ -61,6 +61,7 @@ export const UserBarBtn = () => {
   }
 
   const userName = info?.name || 'Scarlett'; // Default to 'Scarlett' if user or user.name is undefined
+  const userAvatar = info?.avatarUrl || '';
 
   return (
     <div >
@@ -73,7 +74,7 @@ export const UserBarBtn = () => {
             id="panel1bh-header"
           >
 
-            <Avatar alt="Mayona">{userName[0]}</Avatar>
+            <Avatar src={userAvatar} alt="Mayona">{userName[0]}</Avatar>
 
             <Typography sx={{ display: 'flex', width: '100%', flexShrink: 0, alignItems: 'center', justifyItems: 'center', marginLeft: '50px', fontSize: '25px' }}>
               {userName}

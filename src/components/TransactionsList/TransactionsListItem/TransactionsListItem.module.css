@@ -1,0 +1,32 @@
+.change {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+}
+
+.buttons {
+    display: inline-flex;
+    gap: 15px;
+}
+
+.edit,
+.delete {
+    composes: change;
+}
+
+.edit::after {
+    content: none;
+}
+
+.delete::after {
+    content: none;
+}
+
+@media screen and (min-width:1200px) {
+    .edit::after {
+        content: 'Edit';
+    }
+    
+    .delete::after {
+        content: 'Delete';
+    }
+}

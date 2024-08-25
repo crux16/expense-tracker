@@ -26,12 +26,6 @@ export const Navigation = () => {
         >
           Transactions
         </NavLink>
-        <NavLink
-          to="/transactions/history/expenses"
-          className={({ isActive }) => (isActive ? css.linkActive : css.link)}
-        >
-          History
-        </NavLink>
         </>
       )}
     </nav>
